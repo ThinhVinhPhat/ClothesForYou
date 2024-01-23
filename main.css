@@ -71,7 +71,7 @@ body {
     position: absolute;
     content: "3";
     font-size: 18px;
-    right: 6px;
+    right: 20px;
     background-color: red;
     border-radius: 10px;
     color: white;
@@ -130,17 +130,46 @@ body {
 .gototopbtn i {
     color: white;
 }
+.picture-container{
+    position: relative;
+}
+
+.picture-container .btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 250px;
+    right: 15px;
+
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.picture-container .pre{
+    left: 80px;
+    transform: translate(-50%,-50%);
+}
+
+.picture-container .next{
+    right: 30px;
+    transform: translate(-50%,-50%);
+}
+
+.picture-container .btn:hover{
+    color: white;
+}
 
 .picture-slide {
-
+    position: relative;
     width: 1400px;
     margin-left: 50px;
     height: 500px;
     overflow: hidden;
     border-radius: 10px;
+  
+    scroll-behavior: smooth;
 }
-
-
 
 .picture-slide figure {
     width: 500%;
@@ -155,7 +184,6 @@ body {
     float: left;
     width: 20%;
 }
-
 
 
 @keyframes slider {
@@ -196,6 +224,13 @@ body {
 
 .category-list img {
     padding: 10px;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+}
+
+.category-list img:hover {
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
 }
 
 .category-list h2 {
@@ -205,4 +240,280 @@ body {
 
 .category-list .aodai{
     width: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-container{
+        max-width: 90%;
+    }
+}
+
+.PE-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.PE-picture-container {
+    position: relative;
+}
+
+.PE-picture-slide {
+    position: relative;
+    width: 1500px;
+    margin-left: 40px;
+    height: 500px;
+    overflow: hidden;
+
+   
+    scroll-behavior: smooth;
+}
+
+.PE-picture-slide figure {
+    display: flex;
+    width: 250%;
+    position: relative;
+    margin: 0px;
+    padding: 0;
+    left: 0;
+    animation: 20s PE-slider infinite;
+    margin-left: -10px;
+   
+}
+@keyframes PE-slider {
+    0%{
+        left: 0
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -20%;
+    }
+    45%{
+        left: -20%;
+    }
+    50%{
+        left: -40%;
+    }
+    70%{
+        left: -40%;
+    }
+    75%{
+        left: -60%;
+    }
+    85%{
+        left: -60%
+    }
+    95%{
+        left: -80%;
+    }
+    100%{
+        left: -125%;
+    }
+}
+
+
+.PE-picture-slide figure img {
+    float: left;
+    width: 80%;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+}
+
+.PE-picture-slide figure img:hover{
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
+}
+
+
+.PE-picture-container .pic-btn {
+    position: absolute  ;
+    width: 50px;
+    height: 50px;
+    top: 180px;
+    right: 15px;
+
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.PE-picture-container  .pre{
+    left: 19px;
+    transform: translate(-50%,-50%);
+}
+
+.PE-picture-container  .next{
+    right: -50px;
+    transform: translate(-50%,-50%);
+}
+
+.PE-picture-container  .pic-btn:hover{
+    color: white;
+}
+
+.adv-header{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color:black;
+    color: white;
+}
+
+.advtisment-silde {
+    display: flex;
+    padding: 40px;
+}
+
+.ads_1 {
+    margin-left: 30px;
+   position: relative;
+}
+
+.ads_1 img{
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+}
+
+.ads_1 img:hover{
+   -webkit-transform: scale(2); 
+   transform: scale(1.05);
+}
+.ads_2 {
+   
+   position: relative;
+}
+.ads_2 img{
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+}
+
+.ads_2 img:hover{
+   -webkit-transform: scale(2); 
+   transform: scale(1.05);
+}
+
+.detail_1 {
+    width: 600px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.detail_1  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.detail_1  a:hover{
+    color: lightskyblue;
+}
+
+.detail_2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.detail_2  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.detail_2 a:hover{
+    color: lightskyblue;
+}
+
+.ads-line {
+    margin: 100px;
+    margin-top: -30px;
+    width: 3px;
+    height: 400px;
+    background-color: blue;
+    border-radius: 20px;
+}
+
+.ads_1 .play-button {
+    position: absolute;
+    top: 150px; 
+    right: 280px;
+    color: white;
+    cursor: pointer;
+}
+.ads_1 .play-button i {
+   font-size: 50px;
+   transition: color 0.3s ease;
+}
+
+.ads_1.play-button i:hover {
+    color: black;
+}
+
+.ads_2 .play-button {
+    position: absolute;
+    top: 150px; 
+    right: 280px;
+    color: white;
+    cursor: pointer;
+}
+
+.ads_2 .play-button i {
+    font-size: 50px;
+    transition: color 0.3s ease;
+ }
+ 
+ .ads_2 .play-button i:hover {
+     color: black;
+ }
+
+.skirt-header {
+    display: flex;
+    justify-content: center;
+}
+.women-skirt {
+    display: flex;
+    justify-content: center;
+}
+
+.women-skirt img {
+    width: 400px;
+    margin: 20px;
+    transition: webkit-transform 0.3s ease;
+    transition: transform 0.3s ease ;
+}
+
+.women-skirt img:hover {
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
+}
+
+.women-skirt h3 {
+    margin-left: 110px;
+}
+
+.women-skirt .model_1 a {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.women-skirt .model_2 a {
+    display: flex;
+    justify-content: center;
+}
+
+.women-skirt .model_3 a {
+    display: flex;
+    justify-content: center;
+}
+.women-skirt a{
+    transition: color 0.3s ease;
+}
+
+.women-skirt a:hover {
+    color: blue;
 }
