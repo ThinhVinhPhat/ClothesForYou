@@ -24,11 +24,14 @@ search_bar.addEventListener("focus",() =>{
 
 
 // for image scoller
-var counter =1;
-setInterval(function(){
-    document.getElementById('radio'+counter).checked=true;
-    counter++;
-    if(counter>4){
-        counter=1;
-    }
+const nextbtn = document.querySelector(".next")
+const prebtn = document.querySelector(".pre")
+const slider = document.querySelector(".picture-slide")
+
+nextbtn.addEventListener("click", ()=>{
+    slider.scrollLeft += 1400;
 })
+prebtn.addEventListener("click", ()=>{
+    slider.scrollLeft -= 1400;
+})
+
