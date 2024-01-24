@@ -24,11 +24,25 @@ search_bar.addEventListener("focus",() =>{
 
 
 // for image scoller
-var counter =1;
-setInterval(function(){
-    document.getElementById('radio'+counter).checked=true;
-    counter++;
-    if(counter>4){
-        counter=1;
-    }
+const nextbtn = document.querySelector(".next")
+const prebtn = document.querySelector(".pre")
+const slider = document.querySelector(".picture-slide")
+
+nextbtn.addEventListener("click", ()=>{
+    slider.scrollLeft += 1400;
+})
+prebtn.addEventListener("click", ()=>{
+    slider.scrollLeft -= 1400;
+})
+
+// for PE image scoller
+const pe_nextbtn = document.querySelector(".PE-picture-container .next")
+const pe_prebtn = document.querySelector(".PE-picture-container .pre")   
+const pe_slide = document.querySelector(".PE-picture-slide")   
+
+pe_nextbtn.addEventListener("click",()=>{
+    pe_slide.scrollLeft += 300;
+})
+pe_prebtn.addEventListener("click",()=>{
+    pe_slide.scrollLeft -= 300;
 })
