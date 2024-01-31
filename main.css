@@ -27,7 +27,7 @@ body {
 .menu-container nav ul li  {
     display: inline-block;
     list-style: none;
-
+    display: flex;
     margin: 20px;
 }
 
@@ -62,15 +62,12 @@ body {
     justify-content: space-evenly;
 }
 
-.sub-menu-choice {
-   
+.sub-menu-choice li {
+    display: fl;
 
    
 }
 
-.sub-menu-choice ul li {
-    display: inline-block;
-}
 
 
 .find_and_addcart {
