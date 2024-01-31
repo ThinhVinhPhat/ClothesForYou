@@ -1,3 +1,4 @@
+
 html {
     scroll-behavior: smooth;
 }
@@ -26,7 +27,7 @@ body {
 .menu-container nav ul li  {
     display: inline-block;
     list-style: none;
-    display: flex;
+
     margin: 20px;
 }
 
@@ -42,6 +43,35 @@ body {
     width: 100px;
     height: 90px;
 }
+
+
+.sub-menu{
+    
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 80%;
+    height: 80%;
+    background-color: #f2f2f2;
+    
+ 
+}
+
+.sub-menu-title {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sub-menu-choice {
+   
+
+   
+}
+
+.sub-menu-choice ul li {
+    display: inline-block;
+}
+
 
 .find_and_addcart {
     display: flex;
@@ -516,4 +546,321 @@ body {
 
 .women-skirt a:hover {
     color: blue;
+}
+
+.signature-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.signature-picture-slide figure {
+    display: flex;
+    width: 250%;
+    position: relative;
+    margin: 0px;
+    padding: 0;
+    left: 0;
+    animation: 20s signature-slider infinite;
+    margin-left: -10px;
+    overflow-x: auto;
+   
+}
+@keyframes signature-slider {
+    0%{
+        left: 0
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -20%;
+    }
+    45%{
+        left: -20%;
+    }
+    50%{
+        left: -40%;
+    }
+    70%{
+        left: -40%;
+    }
+    75%{
+        left: -60%;
+    }
+    85%{
+        left: -60%
+    }
+    95%{
+        left: -80%;
+    }
+    100%{
+        left: -106%;
+    }
+}
+
+
+.signature-picture-slide figure img {
+    float: left;
+    width: 60%;
+   
+}
+
+
+.sub-img {
+ display: flex;
+ width: 200px;
+ margin-left: 10px;
+}
+
+.sub-img img{
+    width: -10px;
+    cursor: pointer;
+    height: 65px;
+    padding: 10px;
+ 
+  border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+}
+
+.sub-img img:hover{
+    -webkit-transform: scale(2.0);
+    transform: scale(1.05);
+}
+
+.product-name {
+    width: 200px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.product-name a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+.product-name a:hover{
+    color: rgb(51, 51, 247);
+}
+
+.price {
+    display: flex;
+    margin-left: 15px;
+}
+.price p {
+    color: red;
+    padding: 10px;
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+.price-voucher p {
+    text-decoration: line-through;
+    font-size: 13px;
+    margin-top: 18px;
+    color: rgba(249, 107, 107, 0.982);
+
+}
+
+.signature-picture-slide .silde{
+    width: 300px;
+    padding-left: -10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.signature-picture-slide .silde .main-picture{
+    width: 400px;
+    position: relative;
+    
+}
+
+.signature-picture-slide .silde .main-picture img {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+   
+}
+
+.silde:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.pro-decription {
+    margin-left:40px;
+}
+.signature-picture-slide .silde {
+    padding: 10px;
+}
+
+.buy {
+    margin-left: 80px;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    background-color: black;
+   transition:  background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+.buy:hover{
+    background-color: grey;
+    color: blue;
+}
+
+.buy a{
+    color: white;
+    text-decoration: none;
+}
+
+.lines {
+    margin: 150px;
+   
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.lines-2 {
+    margin: 150px;
+    margin-top: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.resigter {
+    width: 100%;
+    padding: 10px;
+    margin-top: -100px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    
+}
+.resigter-image {
+    margin-right: 30px;
+}
+
+.resigter  img{
+    width: 500px;
+    padding: 30px;
+}
+
+.resigter-form {
+    width: 500px;
+    padding: 30px;
+}
+.resigter-form h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+}
+
+.resigter-form p {
+    font-size: 15px;
+}
+.resigter-form input {
+    width: 420px;
+    padding: 10px;
+    border-radius: 10px;
+    color: gray;
+    border-color: gray;
+}
+
+.resgiter-button{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: -60px;
+}
+
+.resgiter-button button {
+    width: 450px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+    margin: 20px;
+    margin-top: -100px;
+}
+
+.footer .first-column {
+    padding: 10px;
+}
+.footer  a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer  li {
+    list-style: none;
+    padding: 10px;
+    margin-left: -45px;
+}
+
+.footer .second-column {
+    padding: 10px;
+}
+.footer .third-column {
+    padding: 10px;
+}
+
+
+.footer .fourth-column {
+     padding: 10px;
+     text-align: center;
+}
+
+.footer .fourth-column i {
+    width: 100px;
+    background-color: white;
+    font-size: 25px;
+    transition: webkit-transform 0.3s ease ;
+    transition: transform 0.3s ease ;
+}
+
+.footer .fourth-column i:hover {
+    -webkit-transform: scale(2.0);
+    transform: scale(1.50);
+}
+
+
+.footer .fourth-column .facebook{
+    color: blue;
+}
+
+.footer .fourth-column .youtube{
+    color: red;
+}
+.footer .fourth-column .instagram{
+    color: black;
+}
+.footer .fourth-column h3 {
+    text-align: center;
+}
+
+
+.store-link a {
+    padding: 15px;
+  
+}
+.store-link img {
+    width: 70px;
+    transition: webkit-transform 0.3s ease ;
+    transition: transform 0.3s ease ;
+}
+
+.store-link img:hover {
+    -webkit-transform: scale(2.0);
+    transform: scale(1.05);
 }
