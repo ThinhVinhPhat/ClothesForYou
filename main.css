@@ -16,6 +16,7 @@ body {
 .menu-container nav{
     flex: 1;
     text-align: right;
+    margin-left: -150px;
 }
 
 .menu-container nav ul  {
