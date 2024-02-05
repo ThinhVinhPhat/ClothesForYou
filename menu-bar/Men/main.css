@@ -15,6 +15,7 @@ body {
 .menu-container nav{
     flex: 1;
     text-align: right;
+    margin-left: -150px;
 }
 
 .menu-container nav ul  {
@@ -408,4 +409,170 @@ body {
 
 .PE-picture-container  .pic-btn:hover{
     color: white;
+}
+
+.category-price {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #ddd;
+    margin: 10px 200px 100px 200px;
+}
+
+.category-price button {
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.category-price button:hover{
+    background-color: rgb(53, 53, 242);
+}
+
+.resigter {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    
+}
+.resigter-image {
+    margin-right: 30px;
+}
+
+.resigter  img{
+    width: 500px;
+    padding: 30px;
+}
+
+.resigter-form {
+    width: 500px;
+    padding: 30px;
+}
+.resigter-form h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50px;
+}
+
+.resigter-form p {
+    font-size: 15px;
+}
+.resigter-form input {
+    width: 420px;
+    padding: 10px;
+    border-radius: 10px;
+    color: gray;
+    border-color: gray;
+}
+
+.resgiter-button{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-left: -60px;
+}
+
+.resgiter-button button {
+    width: 450px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+    margin: 20px;
+    margin-top: -100px;
+}
+
+.footer .first-column {
+    padding: 10px;
+}
+.footer  a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer  li {
+    list-style: none;
+    padding: 10px;
+    margin-left: -45px;
+}
+
+.footer .second-column {
+    padding: 10px;
+}
+.footer .third-column {
+    padding: 10px;
+}
+
+
+.footer .fourth-column {
+     padding: 10px;
+     text-align: center;
+}
+
+.footer .fourth-column i {
+    width: 100px;
+    background-color: white;
+    font-size: 25px;
+    transition: webkit-transform 0.3s ease ;
+    transition: transform 0.3s ease ;
+}
+
+.footer .fourth-column i:hover {
+    -webkit-transform: scale(2.0);
+    transform: scale(1.50);
+}
+
+
+.footer .fourth-column .facebook{
+    color: blue;
+}
+
+.footer .fourth-column .youtube{
+    color: red;
+}
+.footer .fourth-column .instagram{
+    color: black;
+}
+.footer .fourth-column h3 {
+    text-align: center;
+}
+
+
+.store-link a {
+    padding: 15px;
+  
+}
+.store-link img {
+    width: 70px;
+    transition: webkit-transform 0.3s ease ;
+    transition: transform 0.3s ease ;
+}
+
+.store-link img:hover {
+    -webkit-transform: scale(2.0);
+    transform: scale(1.05);
+}
+
+.lines {
+    margin: 150px;
+   
+    border: 1px solid gray;
+    border-radius: 10px;
 }
