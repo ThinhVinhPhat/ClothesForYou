@@ -1,12 +1,17 @@
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+html, body {
+    height: 100%;
 }
 
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+  
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .menu-container {
     display: flex;
   
