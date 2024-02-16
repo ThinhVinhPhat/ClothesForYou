@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -15,6 +16,20 @@ body {
 .container{
     display: inline-block;
     justify-content: center ;
+}
+
+.gototopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #655cf0af;
+    text-align: center;
+    line-height: 50px;
+    right: 20px;
+    bottom: 40px;
+}
+.gototopbtn i {
+    color: white;
 }
 
 
@@ -388,6 +403,11 @@ body {
     text-decoration: none;
     padding: 10px 100px 10px 100px;
     background-color: orange;
+    transition: background-color 0.3s ease;
+}
+
+.conservation-panel .button a:hover{
+    background-color: rgb(151, 99, 3);
 }
 
 .footer {
@@ -396,6 +416,31 @@ body {
     padding: 30px;
 }
 
-.footer h1 {
-    margin-left: 100px;
+.footer h3 {
+    margin-left: 40px;
+}
+
+.cotent-side i,ion-icon{
+    margin-right: 10px;
+}
+
+.cotent-side li{
+
+    list-style: none;
+    padding: 5px;
+}
+
+.cotent-side li>a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer .img{
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .img img{
+    width: 30%;
 }
