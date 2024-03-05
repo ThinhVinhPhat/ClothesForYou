@@ -24,25 +24,53 @@ search_bar.addEventListener("focus",() =>{
 
 
 // for image scoller
-const nextbtn = document.querySelector(".next")
-const prebtn = document.querySelector(".pre")
-const slider = document.querySelector(".picture-slide")
+const image_list = document.querySelector(".picture-container .picture-slide")
+let items  = document.querySelectorAll(".picture-container .picture-slide .silde")
+let dots = document.querySelectorAll(".picture-container .picture-slide .dots li");
+let prev = document.querySelector(".picture-container  .btn_pre ")
+let next = document.querySelector(".picture-container  .btn_next ")
 
-nextbtn.addEventListener("click", ()=>{
-    slider.scrollLeft += 1400;
-})
-prebtn.addEventListener("click", ()=>{
-    slider.scrollLeft -= 1400;
+
+
+let active = 0;
+let itemlength = items.length -1;
+
+next.addEventListener("click",()=>{
+    if(active + 1 > itemlength){
+        active =0;
+    }
+    else{
+        active += 1;
+    }
+    reloadSlider();
+
+    })
+prev.addEventListener("click",()=>{
+    if(active -1 <0){
+        active =itemlength;
+    }
+    else{
+        active -= 1;
+    }
+    reloadSlider();
+
+    })
+let refreshSlider = setInterval(()=> {next.click()},3000)
+const reloadSlider = () =>{
+    let checkleft = items[active].offsetLeft;
+    image_list.style.left = -checkleft + "px";
+    
+    let activedots = document.querySelector(".picture-container .picture-slide .dots .active");
+    image_list.classList.remove('active');
+    dots[active].classList.add('active');
+    let refreshSlider = setInterval(()=> {next.click()},3000)
+}
+
+dots.forEach((dot , key) => {
+    dot.addEventListener('click',()=>{
+        active = key;
+        reloadSlider();
+    })
 })
 
-// for PE image scoller
-const pe_nextbtn = document.querySelector(".PE-picture-container .next")
-const pe_prebtn = document.querySelector(".PE-picture-container .pre")   
-const pe_slide = document.querySelector(".PE-picture-slide")   
 
-pe_nextbtn.addEventListener("click",()=>{
-    pe_slide.scrollLeft += 300;
-})
-pe_prebtn.addEventListener("click",()=>{
-    pe_slide.scrollLeft -= 300;
-})

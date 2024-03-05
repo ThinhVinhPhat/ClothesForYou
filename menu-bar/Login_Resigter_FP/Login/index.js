@@ -1,11 +1,6 @@
-const inputEL = document.querySelectorAll("[input]")
+const onfocus = (x) => {
+    x.style.background="wheat";
+}
 
 
  
-
-inputEL.forEach(input => {
-    input.addEventListener("click", (e)=>{
-        e.preventDefault();
-        input.style.border-color = 'wheat'
-    })
-})

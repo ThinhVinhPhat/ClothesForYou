@@ -193,21 +193,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -100px;
+    margin-left: -80px;
 }
 
 .login-container .input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: -100px;
+    margin-left: -80px;
 }
 
 .login-container .input input {
-    width: 300px;
+    width: 400px;
     padding: 10px;
     margin: 5px;
     border-color: black;
+    border-radius: 5px;
     
 }
 .login-container .input input:focus {
@@ -218,7 +219,7 @@ body {
 
 .login-container .input button {
     padding: 10px;
-    width: 325px;
+    width: 423px;
     margin: 10px;
     background-color: black;
     color: white;
@@ -244,10 +245,22 @@ body {
     padding: 5px;
     color: black;
     transition: color 0.3s ease;
+    font-size: 17px;
 }
 .login-container .buttons a:hover{
     color: #655cf0af;
 }
+
+
+.login-container .lines{
+    border-bottom:1px solid black ;
+    margin-bottom: -100px;
+}
+
+
+
+
+
 
 
 .resigter {
