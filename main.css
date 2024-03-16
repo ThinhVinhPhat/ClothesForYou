@@ -15,6 +15,38 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0px 100px;
+    z-index: 10000000;
+    margin: auto;
+
+}
+
+.container-2 {
+    width: 1500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-2 a{
+    transition: color 0.3s ease;
+}
+
+.container-2 a:hover{
+    color: #655cf0af;
+}
+
 
 #menu{
     
@@ -92,14 +124,15 @@ body {
     color: white;
 }
 
-.cart-page {
+.find_and_addcart .cart-page {
     display: none;
     background-color: #f2f2f2f2;
     position: absolute;
-
+    top: 0;
+    left: 0;
 }
 
-.find_and_addcart i:hover>.cart-page{
+.find_and_addcart .cart-page:hover{
     display: inline-block;
 }
 
@@ -108,7 +141,7 @@ body {
 .scrolling-text {
    
     background-color:rgb(56, 56, 228);
-    width: 1280px;
+    width: 1500px;
     margin: 10px;
 
     display: flex;
@@ -154,6 +187,7 @@ body {
     line-height: 50px;
     right: 20px;
     bottom: 40px;
+    z-index: 10000000;
 }
 .gototopbtn i {
     color: white;
@@ -269,6 +303,7 @@ body {
 .PE-picture-container {
     position: relative;
     display: flex;
+  
 }
 
 .PE-picture-slide {
@@ -277,13 +312,14 @@ body {
     margin-left: 40px;
     height: 500px;
     overflow: hidden;
-
+   
    
     scroll-behavior: smooth;
 }
 
 .PE-picture-slide figure {
     display: flex;
+    padding: 100px;
     width: 250%;
     position: relative;
     margin: 0px;
@@ -370,6 +406,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 10px;
+    margin-top: -100px;
     background-color:black;
     color: white;
 }
