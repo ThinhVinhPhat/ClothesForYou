@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/85b8914781.js" crossorigin="anonymous"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,53 +17,175 @@
 
 </head>
 <body>
+    <div class="container">
+
+    
     <div class="main-container">
         <div class="header-container">
         
-            <div class="menu-container">
+            <header>
 
-                <img src="/ClothesForYou/img/Clothes.jpg" alt="">
-              
-                
-                <nav>
-                    <ul>
-                        <li>  <a href="https://thinhvinhphat.github.io/ClothesForYou/">Trang Chủ</a></li>
-                        <li>  <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Men/"  >Nam</a></li>
-                     
-
+           
+                <div class="container-2">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu" >
+                        <img src="../." alt="">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                          </button>
+            
                        
-                        <li> <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Women/" style="color: lightblue;">Nữ</a></li>
-                        <li> <a href="">Bộ Sưu Tập</a></li>
-                        <li> <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html">Đặt lịch may</a></li>
-                        <li> <a href="">Đơn hàng</a></li>
-                        <li> <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login">Đăng nhập</a> <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter">/Đăng ký</a></li>
-                    </ul>
-
+            
+                          <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                              <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="https://thinhvinhphat.github.io/ClothesForYou/"> <i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+                              </li>
+                             
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Men/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Nam
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <div class="row">
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Sơ mi</h2></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi dài tay</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi ngắn tay</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi ký dạ</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi dạ</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi trắng</a></li>
+                                    
+                                    </div>
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Quần nam</h2></li>
+                                      <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                      <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                                      <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                    </div>
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                      <li><a class="dropdown-item" href="#">Áo len nam</a></li>
+                                      <li><a class="dropdown-item" href="#">Tất nam</a></li>
+                                      <li><a class="dropdown-item" href="#">Đồ lót nam</a></li>
+                                    </div>
+            
+            
+                                  </div>
+                                  
+                                </ul>
+                              </li>
+                             
+                              <li class="nav-item dropdown">  
+                                <a class="nav-link dropdown-toggle fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Women/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Nữ
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <div class="row">
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Sơ mi nữ</h2></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi nữ dài tay</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi nữ ngắn tay</a></li>
+                                      <li><a class="dropdown-item" href="#">Sơ mi nữ tay lợ</a></li>
+                                    </div>
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Đầm </h2></li>
+                                      <li><a class="dropdown-item" href="#">Đầm nữ</a></li>
+                                      <li><a class="dropdown-item" href="#">Đầm đi biển</a></li>
+                                      <li><a class="dropdown-item" href="#">Đầm công sở</a></li>
+                                      <li><a class="dropdown-item" href="#">Đầm dạo phố</a></li>
+                                    </div>
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Quần nữ </h2></li>
+                                      <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                      <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                     
+                                    </div>
+            
+            
+                                    <div class="col">
+                                      <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                      <li><a class="dropdown-item" href="#">Áo phông nữ</a></li>
+                                      <li><a class="dropdown-item" href="#">Phụ kiện</a></li>
+                                      <li><a class="dropdown-item" href="#">Chăn thu đông</a></li>
+                                    </div>
+            
+            
+                                  </div>
+                                  
+                                </ul>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Collection/index.html" >Bộ sưu tập</a>
+                              </li>
+                         
+                              <li class="nav-item">
+                                <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
+                              </li>
+                         
+                              <li class="nav-item">
+                                <a class="nav-link  fw-bold" href="#">Đơn hàng</a>
+                              </li>
+                         
+                            </ul>
+                        </div>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                           
+                        </form>
+                     
+                        <div class="login_resigter">
+                                    <div class="collapse navbar-collapse" id="collapsibleNavId">
+                                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                                            <li class="nav-item d-flex">
+                                                <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                                                    >Đăng nhập
+                                                    <span class="visually-hidden">(current)</span></a
+                                                >
+                                             
+                                                <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                                    >/ Đăng ký
+                                                    <span class="visually-hidden">(current)</span></a
+                                                >
+                                            </li>
+                                           
+                                         
+                                             
+                                        </form>
+                                    </div>
+                                </div>
+                            
+                                <div class="find_and_addcart">
+                                    <a href="" class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <div class="cart-page">
+                                     
+                                    </div>
+                                  </div>
+    
+    
+    
+    
+    
+                        </div>
+    
+                    </div>
                 </nav>
-              
-                
-                
+                <div class="scrolling-text">
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                    <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                </div>
             </div>
-            <div class="find_and_addcart">                              
-             <li>  <input id="search" type="text" value="Tìm kiếm...." onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this)"> </li>
-                <li><a href="" class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a></li>
-
-
-            </div>
-
-            <div class="scrolling-text">
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
-            </div>
-
+            </header>
+          
             <div class="gototopbtn">
                 <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
             </div> 
@@ -83,7 +206,7 @@
                 </div>
 
                 <div class="sourvine-list">
-                        <a href=""><img src="https://theme.hstatic.net/1000392339/1000843287/14/hombanner2_img3_grande.jpg?v=1942" alt="" class="aodai"></a>
+                        <a href=""><img src="https://theme.hstatic.net/1000392339/1000843287/14/hombanner2_img3_grande.jpg?v=1942" alt="" style="width: 130%;"></a>
                 <a href=""> <h2>Đầm Nữ</h2></a>   
                 </div>
             </div>
@@ -298,3 +421,4 @@
 
 
             </div>
+        </div>
