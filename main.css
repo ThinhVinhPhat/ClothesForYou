@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  
+    max-width: 1240px;
     vertical-align: middle;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -200,6 +200,7 @@ header
     margin: auto;
     position: relative;
     overflow: hidden;
+    margin-top: 130px;
 }
 .picture-slide {
     position: absolute;
@@ -285,11 +286,7 @@ header
     width: 420px;
 }
 
-@media screen and (max-width: 1000px) {
-    .main-container{
-        max-width: 90%;
-    }
-}
+
 
 .PE-header {
     width: 100%;
@@ -568,7 +565,11 @@ header
 
 .signature-clothes {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    overflow: hidden;
+    width: 120%;
+    margin-left: -100px;
+
 }
 
 .signature-header {
@@ -590,11 +591,16 @@ header
     margin: 10px 120px 10px 10px;
     padding: 10px;
     left: 0px;
-   
+    
     animation: 20s signature-slider infinite;
     margin-left: -10px;
-  
-   
+}
+
+
+
+.signature-picture-slide  img {
+    float: left;
+    width: 60%;
 }
 @keyframes signature-slider {
     0%{
@@ -631,14 +637,6 @@ header
         left: 0;
     }
 }
-
-
-.signature-picture-slide  img {
-    float: left;
-    width: 60%;
-   
-}
-
 
 .sub-img {
  display: flex;
@@ -703,11 +701,13 @@ header
     padding-left: -10px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
+    
 }
 
 .signature-picture-slide .silde .main-picture{
     width: 400px;
     position: relative;
+
     
 }
 
@@ -716,7 +716,7 @@ header
     display: flex;
     justify-content: center;
     margin-left: 30px;
-   
+    overflow: hidden;
 }
 
 .silde:hover{
@@ -896,4 +896,30 @@ header
 .store-link img:hover {
     -webkit-transform: scale(2.0);
     transform: scale(1.05);
+}
+
+
+/* Màn hình điện thoại < 740px */
+@media only screen and (max-width: 46.1875em) {
+    header{
+        left: 0;
+        display: inline-flex;
+       
+        justify-content: start;
+        
+    }
+
+    body {
+        flex-direction: column;
+    }
+    .category-list {
+        flex-direction: column;
+    }
+
+}
+
+
+/* Tablet: witdth >= 740px and width <1024px */
+@media only screen and (max-width: 46.25em) and (max-width: 63.9375em) {
+  
 }
