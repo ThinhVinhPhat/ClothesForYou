@@ -34,7 +34,7 @@ header
 
 .container-2 {
     width: 1500px;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
 }
@@ -568,7 +568,7 @@ header
     justify-content: start;
     overflow: hidden;
     width: 120%;
-    margin-left: -100px;
+    margin-left: -120px;
 
 }
 
@@ -901,20 +901,75 @@ header
 
 /* Màn hình điện thoại < 740px */
 @media only screen and (max-width: 46.1875em) {
-    header{
-        left: 0;
-        display: inline-flex;
-       
-        justify-content: start;
-        
+    body {
+        width: 430px;
+        height: 932px;
+        margin: auto;
     }
 
-    body {
+    .women-skirt {
         flex-direction: column;
     }
-    .category-list {
-        flex-direction: column;
+
+    .container-2 nav{
+        width: 3000%;
     }
+
+    .scrolling-text {
+        width: 3000%;
+    }
+    header{
+        left: 0;
+       
+        width: 5%;
+        justify-content: start;
+        padding: 0%;
+    }
+
+    .picture-slide {
+     width: 1000px;
+    }
+    .picture-container {
+        width: 1000px;
+        margin-left: -30px;
+    
+    }
+    .picture-container img{
+     width: 500px;
+    
+    }
+    .silde {
+        width: 1000px;
+    }
+    
+    .category-list{
+        flex-direction: column;
+        margin-left: -80px;
+    }
+
+    .advtisment-silde{
+        flex-direction: column;
+        margin-left: -20px;
+    }
+    .advtisment-silde img{
+      width: 350px;
+    }
+    
+
+    .ads_1 {
+        margin-left: -10px;
+        margin-bottom: 50px;
+    }
+
+    .ads-line {
+      display: none;
+    }
+
+    .play-button {
+        left: 50%;
+    }
+
+
 
 }
 
