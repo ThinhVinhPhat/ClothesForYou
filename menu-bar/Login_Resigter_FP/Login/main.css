@@ -82,12 +82,10 @@ header
   font-weight: bold;
 }
 
-#search {
-  position: relative;
-}
+
 #search_icon {
   position: absolute;
-  right: 260px;
+  width: 360px;
   background: none;
   border: none;
 }

@@ -87,11 +87,12 @@ header
   position: relative;
 }
 #search_icon {
-  position: absolute;
-  right: 260px;
-  background: none;
-  border: none;
-}
+    position: absolute;
+    width: 360px;
+    background: none;
+    border: none;
+  }
+  
 
 
 
@@ -899,12 +900,17 @@ header
 }
 
 
-/* Màn hình điện thoại < 740px */
+/*Màn hình điện thoại < 740px */
 @media only screen and (max-width: 46.1875em) {
     body {
         width: 430px;
         height: 932px;
         margin: auto;
+    }
+
+    .container-2 {
+        width:  14px;
+        margin-left: 10px;
     }
 
     .women-skirt {
@@ -954,6 +960,15 @@ header
     .advtisment-silde img{
       width: 350px;
     }
+
+    .PE-header {
+        margin-left: -10px;
+    }
+    .PE-picture-container  {
+        width: 150%;
+        margin-left: -50px;
+        margin-top: 10px;
+    }
     
 
     .ads_1 {
@@ -966,12 +981,71 @@ header
     }
 
     .play-button {
-        left: 50%;
+        left: 40%;
+        top: -50%;
     }
 
+    .signature-clothes{
+        margin-left: 55px;
+    }
 
+    .signature-picture-slide{
+            
+        animation: 20s signature-slider infinite;
+    }
+    @keyframes signature-slider {
+        0%{
+            left: 0
+        }
+        20%{
+            left: -20%;
+        }
+        30%{
+            left: -20%;
+        }
+        40%{
+            left: -40%;
+        }
+        50%{
+            left: -40%;
+        }
+        60%{
+            left: -60%;
+        }
+        70%{
+            left: -60%;
+        }
+        80%{
+            left: -80%;
+        }
+        90%{
+            left: -90%;
+        }
+        95%{
+            left: -100%;
+        }
+        100%{
+            left: 0;
+        }
+    }
 
-}
+    .resigter img{
+        width: 10px;
+    }
+
+    .resigter-form {
+        width: 100%;
+        margin-left: -20px;
+    }
+
+    .resigter-form input {
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+} 
 
 
 /* Tablet: witdth >= 740px and width <1024px */

@@ -87,11 +87,12 @@ header
   position: relative;
 }
 #search_icon {
-  position: absolute;
-  right: 260px;
-  background: none;
-  border: none;
-}
+    position: absolute;
+    width: 360px;
+    background: none;
+    border: none;
+  }
+  
 
 
 

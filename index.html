@@ -146,13 +146,14 @@
                     <div class="login_resigter">
                                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                                     <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                                        <li class="nav-item d-flex">
-                                            <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                                        <li class="nav-item d-flex" id="signin">
+                                            <div class="input"></div>
+                                            <a class="nav-link active fw-bold" id="node1" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
                                                 >Đăng nhập
                                                 <span class="visually-hidden">(current)</span></a
                                             >
                                          
-                                            <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                            <a class="nav-link active fw-bold" id="node2" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
                                                 >/ Đăng ký
                                                 <span class="visually-hidden">(current)</span></a
                                             >
@@ -884,11 +885,199 @@
 
         </div>
     </div>
-</div>
+
+    <!-- <form class="add">
+        <div class="mb-3">
+            <label for="" class="form-label">title</label>
+            <input
+                type="text"
+                class="form-control"
+                name="title"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="hello"
+            />
+       
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">description</label>
+            <input
+                type="text"
+                class="form-control"
+                name="description"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">discount</label>
+            <input
+                type="text"
+                class="form-control"
+                name="discount"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+       
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">position</label>
+            <input
+                type="text"
+                class="form-control"
+                name="position"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+       
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">price</label>
+            <input
+                type="text"
+                class="form-control"
+                name="price"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+       
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">size</label>
+            <input
+                type="checkbox"
+               
+                name="size"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="S"
+                checked
+            />S
+            <input
+                type="checkbox"
+             
+                name="size"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="M"
+                checked
+            />M
+            <input
+                type="checkbox"
+              
+                name="size"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="L"
+                checked
+            />L
+            <input
+                type="checkbox"
+             
+                name="size"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="XL"
+                checked
+            />XL
+            <input
+                type="checkbox"
+              
+                name="size"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="XXL"
+                checked
+            />XXL
+
+       
+        </div>
+        
+        <div class="mb-3">
+            <label for="" class="form-label">status</label>
+            <input
+                type="radio"
+              
+                name="status"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="active"
+                checked
+            /> active
+            <input
+                type="radio"
+              
+                name="status"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="inactive"
+            /> inactive
+       
+        </div> 
+
+        <div class="mb-3">
+            <label for="" class="form-label">stock</label>
+            <input
+                type="text"
+                class="form-control"
+                name="stock"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+            />
+       
+        </div> 
+        <div class="mb-3">
+            <label for="" class="form-label">deleted</label>
+            <input
+                type="radio"
+              
+                name="deleted"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="true"
+                checked
+            /> true
+            <input
+                type="radio"
+            
+                name="deleted"
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+                value="false"
+            /> false
+       
+        </div> 
+
+
+        <button>Thêm</button>
+
+    </form>
+
+ -->
+
+
     <script type="module" src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="./backend/index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="./backend/dist/bundle.js"></script>
 </body>
 </html>
