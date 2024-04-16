@@ -83,13 +83,17 @@ header
 }
 
 
-#search_icon {
-  position: absolute;
-  width: 360px;
-  background: none;
-  border: none;
-}
 
+#search_icon {
+    position: absolute;
+    width: 200px;
+    display: flex;
+    top: 20px;
+    justify-content: end;
+    background: none;
+    border: none;
+  }
+  
 
 
 .menu-container {

@@ -83,12 +83,13 @@ header
   font-weight: bold;
 }
 
-#search {
-  position: relative;
-}
+
 #search_icon {
     position: absolute;
-    width: 360px;
+    width: 200px;
+    display: flex;
+    top: 5px;
+    justify-content: end;
     background: none;
     border: none;
   }
@@ -190,6 +191,26 @@ header
     bottom: 40px;
     z-index: 10000000;
 }
+.links {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #655cf0af;
+    text-align: center;
+    line-height: 40px;
+    left: 10px;
+    top: 50%;
+    z-index: 10000000;
+    transition:   -webkit-transform 0.3s ease;
+    transition:   transform 0.3s ease;
+}
+
+.links img:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
 .gototopbtn i {
     color: white;
 }
@@ -332,38 +353,38 @@ header
         left: 0
     }
     20%{
-        left: 0;
+        left: -20%;
     }
     25%{
         left: -20%;
     }
     45%{
-        left: -20%;
+        left: -40%;
     }
     50%{
         left: -40%;
     }
     70%{
-        left: -40%;
+        left: -60%;
     }
     75%{
         left: -60%;
     }
     85%{
-        left: -60%
+        left: -80%
     }
     95%{
-        left: -80%;
+        left: -100%;
     }
     100%{
-        left: -125%;
+        left: 0%;
     }
 }
 
 
 .PE-picture-slide figure img {
     float: left;
-    width: 80%;
+    width: 90%;
     transition: -webkit-transform 0.25s ease;
     transition: transform 0.25s ease;
 }
@@ -902,9 +923,11 @@ header
 
 /*Màn hình điện thoại < 740px */
 @media only screen and (max-width: 46.1875em) {
+
+
     body {
         width: 430px;
-        height: 932px;
+      
         margin: auto;
     }
 
@@ -962,7 +985,7 @@ header
     }
 
     .PE-header {
-        margin-left: -10px;
+        margin-left: 10px;
     }
     .PE-picture-container  {
         width: 150%;
@@ -1029,13 +1052,17 @@ header
         }
     }
 
+    .resigter{
+        flex-direction: column;
+    }
+
     .resigter img{
-        width: 10px;
+        width: 400px;
     }
 
     .resigter-form {
         width: 100%;
-        margin-left: -20px;
+        margin-left: 20px;
     }
 
     .resigter-form input {

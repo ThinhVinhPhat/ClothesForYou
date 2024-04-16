@@ -74,3 +74,6 @@ dots.forEach((dot , key) => {
 })
 
 
+
+// get PE data from firestore
+

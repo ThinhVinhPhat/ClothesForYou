@@ -85,14 +85,17 @@ header
 #search {
   position: relative;
 }
+
 #search_icon {
-  position: absolute;
-  right: 260px;
-  background: none;
-  border: none;
-}
-
-
+    position: absolute;
+    width: 200px;
+    display: flex;
+    top: 20px;
+    justify-content: end;
+    background: none;
+    border: none;
+  }
+  
 
 .find_and_addcart {
     display: flex;
@@ -191,6 +194,26 @@ header
 .gototopbtn i {
     color: white;
 }
+
+.links {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #655cf0af;
+    text-align: center;
+    line-height: 40px;
+    left: 10px;
+    top: 50%;
+    z-index: 10000000;
+    transition:   -webkit-transform 0.3s ease;
+    transition:   transform 0.3s ease;
+}
+
+.links img:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
 
 .middle-container {
     

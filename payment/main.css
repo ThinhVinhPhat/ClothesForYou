@@ -35,3 +35,12 @@ header
 h5{
     text-align: center;
 }
+
+
+@media only screen and (max-width: 46.1875em) {
+
+    img{
+        width: 100%;
+    }
+}
+
