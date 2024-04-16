@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >ClothesForYou</title>
+    <link rel="shortcut icon" href="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/409699970_216526811494866_5558585310836139295_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeE6x8fCtOnUT5TytxYumr1sBCYUk92cwF0EJhST3ZzAXSUgntFaiJ9aTKaxqNSLMT8K-aLhzTn5QYyGlejtI83_&_nc_ohc=sKOzTX3qGlYAX_8vB7N&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAasizmrvpEIBq400n1m_q6dJ6FxlFvT2L8WHgiuEgghQ&oe=659207C9" />
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/85b8914781.js" crossorigin="anonymous"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+    <link href="../css/SanPhamKhac_timber.css" rel="preload stylesheet" as="style" type="text/css">
+    <link href="../css/SanPhamKhac_style.css" rel="preload stylesheet" as="style" type="text/css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+
+           
+            <div class="container-2" >
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu" >
+                    <img src="../." alt="">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                      </button>
+        
+                   
+        
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="https://thinhvinhphat.github.io/ClothesForYou/"> <i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+                          </li>
+                         
+                          <li class="nav-item dropdown">
+                            <a class="nav-link  fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Men/" role="button"  aria-expanded="false">
+                              Nam
+                            </a>
+                            <ul class="dropdown-menu">
+                              <div class="row">
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sơ mi</h2></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi dài tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi ngắn tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi ký dạ</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi dạ</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi trắng</a></li>
+                                
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Quần nam</h2></li>
+                                  <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                  <li><a class="dropdown-item" href="#">Áo len nam</a></li>
+                                  <li><a class="dropdown-item" href="#">Tất nam</a></li>
+                                  <li><a class="dropdown-item" href="#">Đồ lót nam</a></li>
+                                </div>
+        
+        
+                              </div>
+                              
+                            </ul>
+                          </li>
+                         
+                          <li class="nav-item dropdown">  
+                            <a class="nav-link  fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Women/" role="button" aria-expanded="false">
+                              Nữ
+                            </a>
+                            <ul class="dropdown-menu">
+                              <div class="row">
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sơ mi nữ</h2></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ dài tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ ngắn tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ tay lợ</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Đầm </h2></li>
+                                  <li><a class="dropdown-item" href="#">Đầm nữ</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm đi biển</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm công sở</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm dạo phố</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Quần nữ </h2></li>
+                                  <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                 
+                                </div>
+        
+        
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                  <li><a class="dropdown-item" href="#">Áo phông nữ</a></li>
+                                  <li><a class="dropdown-item" href="#">Phụ kiện</a></li>
+                                  <li><a class="dropdown-item" href="#">Chăn thu đông</a></li>
+                                </div>
+        
+        
+                              </div>
+                              
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Collection/index.html" >Bộ sưu tập</a>
+                          </li>
+                     
+                          <li class="nav-item">
+                            <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
+                          </li>
+                     
+                         
+                     
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                       
+                    </form>
+                 
+                    <div class="login_resigter">
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li class="nav-item d-flex" id="signin">
+                                    <div class="input"></div>
+                                    <a class="nav-link active fw-bold" id="node1" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                                        >Đăng nhập
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                 
+                                    <a class="nav-link active fw-bold" id="node2" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                        >/ Đăng ký
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                </li>
+                               
+                             
+                                 
+                            </form>
+                        </div>
+                    </div>
+                        
+                            <div class="find_and_addcart">
+                                <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Shopping_cart/index.html"  class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                                <div class="cart-page">
+                                
+                                </div>
+                              </div>
+
+
+
+
+
+                    </div>
+
+                </nav>
+                </div>
+            <div class="scrolling-text">
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+            </div>
+        </div>
+        </header>
+
+
+        <div class="main-container" style="margin-top: 120px;"> 
+            <section id="breadcrumb-wrapper2" class="breadcrumb-w-img">
+                <div class="breadcrumb-overlay"></div>
+                <div class="wrapper">
+                    <div class="inner">
+                        <div class="breadcrumb-content">
+                            <div class="wrapper pd-left0">
+                                <div class="inner text-center">
+                                    <div class="breadcrumb-big">
+                                        <h2>Áo sơ mi nam ngắn tay</h2>
+                                    </div>
+                                    <div class="breadcrumb-small">
+                                        <i class="fas fa-home"></i><a href="#" title="Quay trở về trang chủ">Trang chủ</a>
+                                        <span aria-hidden="true">/</span>
+                                        <span>Áo sơ mi nam ngắn tay</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="PageContainer" class="is-moved-by-drawer">
+                <main class="main-content" role="main">
+                    <section id="collection-wrapper" class="filter-res">
+                        <div class="wrapper">
+                            <div class="inner">
+                                <div class="grid">
+                                    <div class="grid__item large--one-quarter medium--one-whole small--one-whole mg-top40 sidebar-none-res">
+                                        <div class="grid-uniform">
+                                            <div class="grid__item large--one-whole medium--one-half small--one-whole item-filter-res">
+                                                <div class="collection-categories">
+                                                    <button class="accordion2 cs-title col-sb-trigger active">
+                                                        <span>Danh mục sản phẩm</span>
+                                                    </button>
+                                                    <div class="panel" style="max-height: 195px;">
+                                                        <ul class="no-bullets">
+                                                            <li><a href="#">Áo phông nam</a></li>
+                                                            <li><a href="#">Áo sơ mi</a></li>
+                                                            <li><a href="#">Quần âu</a></li>
+                                                            <li><a href="#">Áo Veston</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item large--one-whole medium--one-half small--one-whole item-filter-res">
+                                                <div class="collection-filter-material">
+                                                    <button class="accordion2 cs-title col-sb-trigger active">
+                                                        <span>Chất liệu</span>
+                                                    </button>
+                                                    <div class="panel sidebar-sort" style="max-height: 405px;">
+                                                        <ul class="grid mg-left-0 no-bullets filter-variant filter-size1 clearfix ">
+                                                            <li class="li1">
+                                                                <label data-filter="100% Cotton" class="filter-vendor__item 100-cotton">
+                                                                    <input type="checkbox" value="(variant:product=100% Cotton)">
+                                                                    <span>100% Cotton</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="li1">
+                                                                <label data-filter="100% Cotton" class="filter-vendor__item 100-silk">
+                                                                    <input type="checkbox" value="(variant:product=100% Silk)">
+                                                                    <span>100% Silk</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="li1">
+                                                                <label data-filter="100% Cotton" class="filter-vendor__item 100-bamboo">
+                                                                    <input type="checkbox" value="(variant:product=100% Bamboo)">
+                                                                    <span>100% Bamboo</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item large--one-whole medium--one-half small--one-whole item-filter-res">
+                                                <div class="collection-filter-price">
+                                                    <button class="accordion cs-title col-sb-trigger">
+                                                        <span>Khoảng giá</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item large--one-whole medium--one-half small--one-whole item-filter-res">
+                                                <div class="collection-filter-size">
+                                                    <button class="accordion cs-title col-sb-trigger">
+                                                        <span>Kích cỡ</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="grid__item large--one-whole medium--one-half small--one-whole item-filter-res">
+                                                <div class="collection-filter-color">
+                                                    <button class="accordion cs-title col-sb-trigger">
+                                                        <span>Màu sắc</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item large--three-quarters medium--one-whole small--one-whole">
+                                        <div class="collection-content-wrapper">
+                                            <div class="collection-head">
+                                                <div class="grid mg-left-15">
+                                                    <div id="cl-banner-slider" class="owl-carousel">
+                                                        <div class="md-pd-left15 grid__item large--one-whole medium--one-whole small--one-whole pd-left0 mg-bottom40">
+                                                            <a href="#"><img src="../img/sanpham_banner.jpg" alt="Collections"></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid__item large--two-thirds medium--one-whole small--one-whole pd-left0">
+                                                        <div class="collection-title">
+                                                            <h1>Áo sơ mi nam ngắn tay</h1>
+                                                        </div>
+                                                    </div>
+                                                    <div class="grid__item large--one-third medium--one-half small--one-whole pull-right">
+                                                        <div class="form-horizontal  text-right">
+                                                            <label for="SortBy">Sắp xếp</label>
+                                                            <select name="SortBy" id="SortBy">
+                                                                <option value="manual">Tùy chọn</option>
+                                                                <option value="best-selling">Sản phẩm bán chạy</option>
+                                                                <option value="title-ascending">Theo bảng chữ cái từ A-Z</option>
+                                                                <option value="title-descending">Theo bảng chữ cái từ Z-A</option>
+                                                                <option value="price-ascending">Giá từ thấp tới cao</option>
+                                                                <option value="price-descending">Giá từ cao tới thấp</option>
+                                                                <option value="created-descending">Mới nhất</option>
+                                                                <option value="created-ascending">Cũ nhất</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="collection-body">
+                                                <div class="grid-uniform product-list md-mg-left-10">
+                                                    <div class="md-pd-left10 grid__item large--one-third medium--one-half small--one-half">
+                                                        <div class="product-item">
+                                                            <div class="product-normal wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.75s">
+                                                                <div class="product-img">
+                                                                    <a href="#">
+                                                                        <img id="1053706763" width="220" height="240" class="dt-width-100 lazyloaded" src="../img/somitayngan/ao1.jpg" alt="Sơ mi nam ngắn tay May10 form Regular mã 010122448 AD088">
+                                                                    </a>
+                                                                    <div class="gift product_gift_label hide" data-id="1053706763">
+                                                                        <img class="lazyload"alt="icon quà tặng">
+                                                                    </div>
+                                                                    <div class="product-tags">
+                                                                        <div class="tag-saleoff text-center">-43%</div>
+                                                                    </div>
+                                                                    <div class="product-actions text-center clearfix">
+                                                                        <div>
+                                                                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"><span>Mua nhanh</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-onhover">
+                                                                <div class="list-variants-img medium--hide small--hide">
+                                                                    <ul class="no-bullets clearfix text-center product-onhover1 owl-theme owl-carousel d-flex-owl">
+                                                                        <li>
+                                                                            <a class="variant-image-loop1" data-feature-imagetab="1053706763" href="#" title="">
+                                                                                <img class="lazyloaded" src="../img/somitayngan/ao1.jpg" alt="">
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="product-title">
+                                                                    <a href="#">Sơ mi nam ngắn tay form Regular mã 0123 AD001</a>
+                                                                </div>
+                                                                <div class="product-price clearfix">
+                                                                    <span class="current-price">999,999₫</span>
+                                                                    <span class="original-price"><s>1,000,000₫</s></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="md-pd-left10 grid__item large--one-third medium--one-half small--one-half">
+                                                        <div class="product-item">
+                                                            <div class="product-normal wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.75s">
+                                                                <div class="product-img">
+                                                                    <a href="#">
+                                                                        <img id="1053706763" width="220" height="240" class="dt-width-100 lazyloaded" src="../img/somitayngan//ao2.jpg" alt="Sơ mi nam ngắn tay May10 form Regular mã 010122448 AD088">
+                                                                    </a>
+                                                                    <div class="gift product_gift_label hide" data-id="1053706763">
+                                                                        <img class="lazyload"alt="icon quà tặng">
+                                                                    </div>
+                                                                    <div class="product-tags">
+                                                                        <div class="tag-saleoff text-center">-50%</div>
+                                                                    </div>
+                                                                    <div class="product-actions text-center clearfix">
+                                                                        <div>
+                                                                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"><span>Mua nhanh</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-onhover">
+                                                                <div class="list-variants-img medium--hide small--hide">
+                                                                    <ul class="no-bullets clearfix text-center product-onhover1 owl-theme owl-carousel d-flex-owl">
+                                                                        <li>
+                                                                            <a class="variant-image-loop1" data-feature-imagetab="1053706763" href="#" title="">
+                                                                                <img class="lazyloaded" src="../img/somitayngan//ao2.jpg" alt="">
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="product-title">
+                                                                    <a href="#">Sơ mi nam ngắn tay form Regular mã 0123 AD002</a>
+                                                                </div>
+                                                                <div class="product-price clearfix">
+                                                                    <span class="current-price">5,000,000₫</span>
+                                                                    <span class="original-price"><s>10,000,000₫</s></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="md-pd-left10 grid__item large--one-third medium--one-half small--one-half">
+                                                        <div class="product-item">
+                                                            <div class="product-normal wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.75s">
+                                                                <div class="product-img">
+                                                                    <a href="#">
+                                                                        <img id="1053706763" width="220" height="240" class="dt-width-100 lazyloaded" src="../img/somitayngan//ao3.jpg" alt="Sơ mi nam ngắn tay May10 form Regular mã 010122448 AD088">
+                                                                    </a>
+                                                                    <div class="gift product_gift_label hide" data-id="1053706763">
+                                                                        <img class="lazyload"alt="icon quà tặng">
+                                                                    </div>
+                                                                    <div class="product-tags">
+                                                                        <div class="tag-saleoff text-center">-50%</div>
+                                                                    </div>
+                                                                    <div class="product-actions text-center clearfix">
+                                                                        <div>
+                                                                            <button type="button" class="btnQuickView quick-view medium--hide small--hide"><span>Mua nhanh</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-onhover">
+                                                                <div class="list-variants-img medium--hide small--hide">
+                                                                    <ul class="no-bullets clearfix text-center product-onhover1 owl-theme owl-carousel d-flex-owl">
+                                                                        <li>
+                                                                            <a class="variant-image-loop1" data-feature-imagetab="1053706763" href="#" title="">
+                                                                                <img class="lazyloaded" src="../img/somitayngan//ao3.jpg" alt="">
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="product-title">
+                                                                    <a href="#">Sơ mi nam ngắn tay form Regular mã 0123 AD003</a>
+                                                                </div>
+                                                                <div class="product-price clearfix">
+                                                                    <span class="current-price">500,000₫</span>
+                                                                    <span class="original-price"><s>1,000,000₫</s></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pagination not-filter">
+                                                    <div id="pagination-" class="text-center clear-left">
+                                                        <div class="pagination-custom">
+                                                            <span class="page page-node current">1</span>
+                                                            <span class="page"><a class="page-node" href="#">2</a></span>
+                                                            <span class="page"><a class="page-node" href="#">3</a></span>
+                                                            <span class="page page-node">…</span>
+                                                            <span class="page"><a class="page-node" href="#">15</a></span>
+                                                            <span class="nextPage"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></span>
+                                                            <span class="lastPage"><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+        <div class="resigter" id-="resigter-site">
+
+            <div class="resigter-image">
+                <img src="https://cdn.onmarketer.net/upload/editor/126008/10052022112130-1397963b08e1c9bf90f0.jpg" alt="">
+            </div>
+
+            <div class="resigter-form">
+                <h2>ĐĂNG KÝ NHẬN BẢN TIN</h2>
+            <p>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</p>
+                <div class="form">
+                    <form action="">
+                <p>Họ và tên</p>
+                <input type="text" placeholder="Họ tên đầy đủ"> 
+                <p>Số điện thoại</p>
+                <input type="text" placeholder="Số điện thoại">
+                <p>Email</p>
+                <input type="text" placeholder="Email">
+
+                <div class="resgiter-button">
+
+                    <button>Tư vấn cho tôi ngay</button>
+                </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="lines">
+
+    </div>
+
+<div class="footer">
+    <div class="first-column">
+        <h3>TMĐT ClothesForYou</h3>
+        <form action="">
+            <ul>
+                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href="">Điều khoản sử dụng</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+                <li><a href="">Chính sách giao hàng</a></li>
+                <li><a href="">Chính sách thanh toán</a></li>
+                <li><a href="">Chính sách đổi trả bảo hành</a></li>
+            </ul>
+        </form>
+
+
+    </div>
+
+    <div class="second-column">
+        <h3>DANH MỤC SẢN PHẨM</h3>
+        <form action="">
+            <ul>
+                <li><a href="">Tin tức</a></li>
+                <li><a href="">Sản phẩm mới</a></li>
+                <li><a href="">Thời trang Nam</a></li>
+                <li><a href="">Thời trang Nữ</a></li>
+                <li><a href="">Loại áo dài</a></li>
+                <li><a href="">Bộ sưu tập</a></li>
+                <li><a href="">Sản phẩm khác</a></li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="third-column">
+        <h3>LIÊN KẾT WEBSITE</h3>
+        <form action="">
+            <ul>
+                <li><a href="">Website Tổng công ty May 10</a>
+                </li>
+                <li><a href="">Website Khách sạn GarcoDragon</a></li>
+                <li><a href="">Website Siêu thị M10 Mart</a></li>
+                <li><a href="">Website Cao đẳng Nghề Long Biên</a></li>
+                <li><a href="">Liên hệ May đồ</a></li>
+            </ul>
+        </form> 
+    </div>
+    
+    <div class="fourth-column">
+        <h3>Kết nối mạng xã hội</h3>
+    <a href="" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="" class="instagram"><i class="fa-brands fa-x-twitter"></i></a>
+        <h3>
+            Kết nối sàn TMĐT
+        </h3>
+        <div class="store-link">
+
+            <a href="" ><img src="/ClothesForYou/img/shopee_small.webp" alt=""></a>
+            <a href="" class="tiki"><img src="/ClothesForYou/img/tiki__1__small.webp" alt=""></a>
+            <a href="" class="lazada"><img src="/ClothesForYou/img/lazada_small.webp" alt=""></a>
+            <a href=""><img src="/ClothesForYou/img/logo_sendo_small.webp" alt=""></a>
+          
+        </div>
+    </div>
+
+
+</div>
+
+
+    </div>
+</div>
+</body>
+</html>

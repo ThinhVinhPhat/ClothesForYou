@@ -422,96 +422,29 @@ Tranfer("Combo","Combo")
 
 // Signature
 
-// const SignDocs = await getDocs(SignatureRef)
+const SignDocs = await getDocs(SignatureRef)
 
 
-// const Sign_pic_holder = document.querySelector(".signature-picture-slide")
+const Sign_pic_holder = document.querySelectorAll(".signature-picture-slide .silde .main-picture .pic")
 
-// if(!SignDocs.empty){
-//   SignDocs.forEach(doc=>{
-//     const silde = document.createElement("div")    
-//     silde.className = "slide"
+if(!SignDocs.empty){
+  Sign_pic_holder.forEach(holder=>{
+    holder.href = "./description/index.html"
+    const url = new URL(holder.href)
+  for(var i=0;i<SignDocs.length;i++){
+    console.log(SignDocs[i].id)
+  }
+    holder.href = url
+  
+  })
 
-//     const main_picture = document.createElement("div")
-//     main_picture.className = "main-picture"
+}
 
-//     const pro_decription = document.createElement("div")
-//     pro_decription.className = "pro-decription"
 
-//     const buy = document.createElement("div")
-//     buy.className = "buy"
-
-//     if(doc.id !=null){
-//       silde.id = doc.id
-//     }
-//     silde.appendChild(main_picture)
-//     silde.appendChild(pro_decription)
-//     silde.appendChild(buy)
-
-//     Sign_pic_holder.appendChild(silde)
-//   })
-
-// }
+console.log(Sign_pic_holder)
 
 
 
-
-// const Sign_pic_child = Sign_pic_holder.children
-
-
-// for(var i=0;i<Sign_pic_child.length;i++){
-//   const id = Sign_pic_child[i].id  
-//   const SignDoc = doc(db,"Signature",id)
-//   const docSnap = await getDoc(SignDoc)
-
-//   const sub_img = document.createElement("div")
-//   sub_img.className  = "sub-img"
-//   const product_name = document.createElement("div")
-//   product_name.className  = "product-name-img"
-
-//   const price = document.createElement("div")
-//   price.className  = "price"
-//   const price_El = document.createElement("p")
-//   price_El.innerHTML = docSnap.data().price
-//   price.appendChild(price_El)
-
-//  const main_picture = Sign_pic_child[i].getElementsByClassName("main-picture")
-
-//   const imgs = document.createElement("img")
-//   const a= document.createElement("a")
-//   const sub_imgs = docSnap.data().detail_img;
-
-//   const pro_decription = Sign_pic_child[i].getElementsByClassName("pro-decription")
-//   for(var j=0;j<pro_decription.length;j++){
-
-//     for(var k=0;k<sub_imgs.length;k++){
-//       const sub_img = document.createElement("img")
-//       sub_img.src = sub_imgs[i]
-//     }
-
-//     pro_decription[i].appendChild(sub_img)
-//     pro_decription[i].appendChild(price)
-//   }
-
-
-
-
-//   a.href = `./description/index.html`
-//   const url = new URL(a.href)
-
-//   if(a != null){
-//     url.searchParams.set("id",id)
-//   }
-//   else{
-//     url.searchParams.delete("id")
-//   }
-//   a.href = url
-
-
-//   a.appendChild(imgs)
-//   main_picture.appendChild(a)
-
-// }
 
 
 

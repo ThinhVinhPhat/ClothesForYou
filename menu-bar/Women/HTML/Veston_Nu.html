@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >ClothesForYou</title>
+    <link rel="shortcut icon" href="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/409699970_216526811494866_5558585310836139295_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeE6x8fCtOnUT5TytxYumr1sBCYUk92cwF0EJhST3ZzAXSUgntFaiJ9aTKaxqNSLMT8K-aLhzTn5QYyGlejtI83_&_nc_ohc=sKOzTX3qGlYAX_8vB7N&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAasizmrvpEIBq400n1m_q6dJ6FxlFvT2L8WHgiuEgghQ&oe=659207C9" />
+    <link rel="stylesheet" href="../CSS/Nu.css">
+    <script src="https://kit.fontawesome.com/85b8914781.js" crossorigin="anonymous"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+
+           
+            <div class="container-2">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu" >
+                    <img src="../." alt="">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                      </button>
+        
+                   
+        
+                      <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                          <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="https://thinhvinhphat.github.io/ClothesForYou/"> <i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+                          </li>
+                         
+                          <li class="nav-item dropdown">
+                            <a class="nav-link  fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Men/" role="button"  aria-expanded="false">
+                              Nam
+                            </a>
+                            <ul class="dropdown-menu">
+                              <div class="row">
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sơ mi</h2></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi dài tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi ngắn tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi ký dạ</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi dạ</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi trắng</a></li>
+                                
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Quần nam</h2></li>
+                                  <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                  <li><a class="dropdown-item" href="#">Áo len nam</a></li>
+                                  <li><a class="dropdown-item" href="#">Tất nam</a></li>
+                                  <li><a class="dropdown-item" href="#">Đồ lót nam</a></li>
+                                </div>
+        
+        
+                              </div>
+                              
+                            </ul>
+                          </li>
+                         
+                          <li class="nav-item dropdown">  
+                            <a class="nav-link  fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Women/" role="button" aria-expanded="false">
+                              Nữ
+                            </a>
+                            <ul class="dropdown-menu">
+                              <div class="row">
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sơ mi nữ</h2></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ dài tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ ngắn tay</a></li>
+                                  <li><a class="dropdown-item" href="#">Sơ mi nữ tay lợ</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Đầm </h2></li>
+                                  <li><a class="dropdown-item" href="#">Đầm nữ</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm đi biển</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm công sở</a></li>
+                                  <li><a class="dropdown-item" href="#">Đầm dạo phố</a></li>
+                                </div>
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Quần nữ </h2></li>
+                                  <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                                  <li><a class="dropdown-item" href="#">Quần short</a></li>
+                                 
+                                </div>
+        
+        
+                                <div class="col">
+                                  <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                                  <li><a class="dropdown-item" href="#">Áo phông nữ</a></li>
+                                  <li><a class="dropdown-item" href="#">Phụ kiện</a></li>
+                                  <li><a class="dropdown-item" href="#">Chăn thu đông</a></li>
+                                </div>
+        
+        
+                              </div>
+                              
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Collection/index.html" >Bộ sưu tập</a>
+                          </li>
+                     
+                          <li class="nav-item">
+                            <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
+                          </li>
+                     
+                         
+                     
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                       
+                    </form>
+                 
+                    <div class="login_resigter">
+                        <div class="collapse navbar-collapse" id="collapsibleNavId">
+                            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li class="nav-item d-flex" id="signin">
+                                    <div class="input"></div>
+                                    <a class="nav-link active fw-bold" id="node1" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                                        >Đăng nhập
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                 
+                                    <a class="nav-link active fw-bold" id="node2" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                        >/ Đăng ký
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                </li>
+                               
+                             
+                                 
+                            </form>
+                        </div>
+                    </div>
+                        
+                            <div class="find_and_addcart">
+                                <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Shopping_cart/index.html"  class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                                <div class="cart-page">
+                                
+                                </div>
+                              </div>
+
+
+
+
+
+                    </div>
+
+                </nav>
+                </div>
+            <div class="scrolling-text">
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+            </div>
+        </div>
+        </header>
+
+       <div class="pro" style="margin-top: 200px;">
+        <div>
+            <span><img src="../IMG/home.svg" alt="" style="width: 20px; height: 20px;"></span>
+            <strong>Trang chủ/Áo khoác nữ</strong>
+        </div>
+        <div class="content1 d-block ">
+            <div class="dropdown mt-5">
+                <button type="button" class="accordion " data-bs-toggle="collapse"
+                href="#contentId"
+                aria-expanded="false"
+                aria-controls="contentId">
+                    <span>Chất liệu</span>
+                </button>
+                <div class="collapse " id="contentId">
+                    <ul>
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>100% Cotton</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>100% Silk</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> 100% Bamboo</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>100% Linen</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>100% Poly</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> 100% Wool</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>Cotton pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span>Silk pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> Bamboo pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label  class="">
+                                <input type="checkbox" >
+                                <span> Linen pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> Poly pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> Wool pha</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> Poly Spun</span>
+                            </label>
+                        </li>	
+                        
+                        <li class="li1">
+                            <label class="">
+                                <input type="checkbox" >
+                                <span> KateFord</span>
+                            </label>
+                        </li>	
+                    </ul>
+                </div>              
+                <div class="">
+                    <div class="">
+                        <button type="button" class="accordion " data-bs-toggle="collapse"
+                            href="#contentId1"
+                            aria-expanded="false"
+                            aria-controls="contentId1">
+                            <span>Kiểu dáng</span>
+                        </button>
+                        <div class="collapse" id="contentId1">
+                            <ul class="">
+                                
+                                <li>
+                                    <label data-filter="Bộ đồ nữ" class="">
+                                        <input type="checkbox">
+                                        <span>Bộ đồ nữ</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Áo khoác nữ</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label  class="">
+                                        <input type="checkbox" >
+                                        <span>Bộ vest nữ 1 áo 1 quần</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Bộ vest nữ 1 áo 1 váy</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>áo</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label  class="">
+                                        <input type="checkbox" >
+                                        <span>veston</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Áo veston nữ</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Bộ veston nữ 1 áo 1 váy</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Bộ veston nữ 1 áo 1 quần</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Áo blazer nữ</span> 
+                                    </label>
+                                </li>	
+                                
+                                <li>
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span>Bộ veston nữ</span> 
+                                    </label>
+                                </li>	
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="">
+                        <button type="button" class="accordion " data-bs-toggle="collapse"
+                            href="#contentId2"
+                            aria-expanded="false"
+                            aria-controls="contentId2">
+                            <span>Khoảng giá</span>
+                        </button>
+                        <div class="collapse" id="contentId2">
+                            <ul class="">
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Tất cả</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Nhỏ hơn 300,000₫</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Từ 300,000₫ - 500,000₫</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Từ 500,000₫ - 700,000₫</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Từ 700,000₫ - 1,000,000₫</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Từ 1,000,000₫ - 1,500,000₫</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="price-filter" >
+                                        <span>Lớn hơn 1,500,000₫</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+                <div class="">
+                    <div class="">
+                        <button type="button" class="accordion " data-bs-toggle="collapse"
+                            href="#contentId3"
+                            aria-expanded="false"
+                            aria-controls="contentId3">
+                            <span>Kích cỡ</span>
+                        </button>
+                        <div class="collapse" id="contentId3">
+                            <ul class="">
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox">
+                                        <span>S</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> M</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> L</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> XL</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> XXL</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> 35</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> 36</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> 37</span>
+                                    </label>
+                                </li>	
+                                
+                                <li class="">
+                                    <label class="">
+                                        <input type="checkbox" >
+                                        <span> 38</span>
+                                    </label>
+                                </li>	
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="">
+                        <button type="button" class="accordion " data-bs-toggle="collapse"
+                            href="#contentId4"
+                            aria-expanded="false"
+                            aria-controls="contentId4">
+                            <span>Màu sắc</span>
+                        </button>
+                        <div class="collapse" id="contentId4">
+                            <ul class="">
+                                <li class="li1">
+                                    <label data-filter="Xanh" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Xanh" style="background-color: blue">
+                                            </div>                               
+                                            <div class="col" style="background-color: blue"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>
+                                <li class="li1">
+                                    <label data-filter="Đỏ" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Đỏ" style="background-color: red">
+                                            </div>                               
+                                            <div class="col" style="background-color: red"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>	
+                                <li class="li1">
+                                    <label data-filter="Tím" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Tím" style="background-color: #ff00ff">
+                                            </div>                               
+                                            <div class="col" style="background-color: #ff00ff"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>	
+                                <li class="li1">
+                                    <label data-filter="Vàng" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Vàng" style="background-color: #ffff00">
+                                            </div>                               
+                                            <div class="col" style="background-color: #ffff00"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>	
+                                <li class="li1">
+                                    <label data-filter="Đen" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Đen" style="background-color:black">
+                                            </div>                               
+                                            <div class="col" style="background-color: black"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>	
+                                <li class="li1">
+                                    <label data-filter="Trắng" class="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" value="Trắng" style="background-color:white">
+                                            </div>                               
+                                            <div class="col border-dark" style="background-color: rgb(245, 238, 238); border :1px soild black"></div>
+                                    </div>                                       
+                                    </label>
+                                </li>	
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content2 ">
+            <div style="width: 100%; height: 400px; ">
+                <div class="square red"></div>
+            <div class="square green"></div>
+            <div class="square blue"></div>
+            <div class="square yellow"></div>
+            <div class="square purple"></div>
+            <div class="grid mg-left-15">
+                <div id="cl-banner-slider" class="owl-carousel">
+                    <div class="md-pd-left15 grid__item large--one-whole medium--one-whole small--one-whole pd-left0 mg-bottom40">
+                        <a href="https://may10.vn/collections/grusz"><img src="//theme.hstatic.net/1000392339/1000843287/14/cl_banner_img1.jpg?v=2047 " alt="Collections" style="width: 100%; height: 200px;"></a>
+                    </div>  
+                </div>
+                <div class="grid__item large--two-thirds medium--one-whole small--one-whole pd-left0">
+                    <div class="collection-title">
+                        <h1>Áo khoác nữ</h1>
+                    </div>
+                </div>
+                <div class="form-horizontal  text-right float-end">
+                    <label for="SortBy" style="float: right;"><strong>Sắp xếp</strong></label> <br>
+                    <select name="SortBy" id="SortBy" style="height: 55px;">
+                        <option value="manual">Tùy chọn</option>
+                        <option value="best-selling">Sản phẩm bán chạy</option>
+                        <option value="title-ascending">Theo bảng chữ cái từ A-Z</option>
+                        <option value="title-descending">Theo bảng chữ cái từ Z-A</option>
+                        <option value="price-ascending">Giá từ thấp tới cao</option>
+                        <option value="price-descending">Giá từ cao tới thấp</option>
+                        <option value="created-descending">Mới nhất</option>
+                        <option value="created-ascending">Cũ nhất</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div class="card-group d-inline  justify-content-between ">
+                <div class="row  justify-content-between mt-3">
+                    <div class="col-4 ">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="../IMG/Screenshot 2024-04-15 212000.png"
+                                alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h4 class="card-title">Bộ 1</h4>
+                                <p class="card-text">Giá : 10000000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="../IMG/Screenshot 2024-04-15 212009.png"
+                                alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h4 class="card-title">Bộ 2</h4>
+                                <p class="card-text">Giá : 15000000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="card">
+                            <img
+                                class="card-img-top"
+                                src="../IMG/Screenshot 2024-04-15 212020.png"
+                                alt="Card image cap"
+                            />
+                            <div class="card-body">
+                                <h4 class="card-title">Bộ 3</h4>
+                                <p class="card-text">Giá : 25000000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="d-flex justify-content-center m-3">
+                <input type="button" name="" id="" value="1" class="m-2">
+                <input type="button" name="" id="" value="2" class="m-2">
+                <input type="button" name="" id="" value="3" class="m-2">
+                <input type="button" name="" id="" value=">" class="m-2">
+                <input type="button" name="" id="" value=">>" class="m-2">
+            </div>
+            <div class="d-grid justify-content-center m-3">
+                Bộ sưu tập áo vest nữ công sở của May 10 chắc chắn sẽ làm bạn hài lòng. Sự đa dạng trong kiểu dáng, thiết kế: áo vest nữ sang trọng, áo vest nữ thời trang, bộ vest nữ,... mỗi mẫu đều mang lại cho bạn phong cách riêng, tạo nên đẳng cấp khác biệt cho bạn.
+            </div>
+        </div>
+        
+        <div class="resigter" id-="resigter-site">
+
+            <div class="resigter-image">
+                <img src="https://cdn.onmarketer.net/upload/editor/126008/10052022112130-1397963b08e1c9bf90f0.jpg" alt="">
+            </div>
+
+            <div class="resigter-form">
+                <h2>ĐĂNG KÝ NHẬN BẢN TIN</h2>
+            <p>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</p>
+                <div class="form">
+                    <form action="">
+                <p>Họ và tên</p>
+                <input type="text" placeholder="Họ tên đầy đủ"> 
+                <p>Số điện thoại</p>
+                <input type="text" placeholder="Số điện thoại">
+                <p>Email</p>
+                <input type="text" placeholder="Email">
+
+                <div class="resgiter-button">
+
+                    <button>Tư vấn cho tôi ngay</button>
+                </div>
+
+                    </form>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+       </div>
+  
+    <div class="lines">
+
+    </div>
+
+<div class="footer">
+    <div class="first-column">
+        <h3>TMĐT ClothesForYou</h3>
+        <form action="">
+            <ul>
+                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href="">Điều khoản sử dụng</a></li>
+                <li><a href="">Chính sách bảo mật</a></li>
+                <li><a href="">Chính sách giao hàng</a></li>
+                <li><a href="">Chính sách thanh toán</a></li>
+                <li><a href="">Chính sách đổi trả bảo hành</a></li>
+            </ul>
+        </form>
+
+
+    </div>
+
+    <div class="second-column">
+        <h3>DANH MỤC SẢN PHẨM</h3>
+        <form action="">
+            <ul>
+                <li><a href="">Tin tức</a></li>
+                <li><a href="">Sản phẩm mới</a></li>
+                <li><a href="">Thời trang Nam</a></li>
+                <li><a href="">Thời trang Nữ</a></li>
+                <li><a href="">Loại áo dài</a></li>
+                <li><a href="">Bộ sưu tập</a></li>
+                <li><a href="">Sản phẩm khác</a></li>
+            </ul>
+        </form>
+    </div>
+
+    <div class="third-column">
+        <h3>LIÊN KẾT WEBSITE</h3>
+        <form action="">
+            <ul>
+                <li><a href="">Website Tổng công ty May 10</a>
+                </li>
+                <li><a href="">Website Khách sạn GarcoDragon</a></li>
+                <li><a href="">Website Siêu thị M10 Mart</a></li>
+                <li><a href="">Website Cao đẳng Nghề Long Biên</a></li>
+                <li><a href="">Liên hệ May đồ</a></li>
+            </ul>
+        </form> 
+    </div>
+    
+    <div class="fourth-column">
+        <h3>Kết nối mạng xã hội</h3>
+    <a href="" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+    <a href="" class="instagram"><i class="fa-brands fa-x-twitter"></i></a>
+        <h3>
+            Kết nối sàn TMĐT
+        </h3>
+        <div class="store-link">
+
+            <a href="" ><img src="/ClothesForYou/img/shopee_small.webp" alt=""></a>
+            <a href="" class="tiki"><img src="/ClothesForYou/img/tiki__1__small.webp" alt=""></a>
+            <a href="" class="lazada"><img src="/ClothesForYou/img/lazada_small.webp" alt=""></a>
+            <a href=""><img src="/ClothesForYou/img/logo_sendo_small.webp" alt=""></a>
+          
+        </div>
+    </div>
+
+
+</div>
+
+
+    </div>
+</div>
+</div>
+</body>
+</html>
