@@ -696,9 +696,9 @@ header
 
 
     body {
-        width: 430px;
+        width: 330px;
       
-        margin: auto;
+     
     }
 
     .container-2 {
@@ -773,11 +773,22 @@ header
     
 
     .category-price{
+        display: inline;
+        justify-content: center;
+        width: 100%;
+    }
+    .category-price button{
+        display: inline;
+        justify-content: center;
         width: 100%;
     }
 
+    
+
     .resigter{
         flex-direction: column;
+        width: 450px;
+        margin-left: -30px;
     }
 
     .resigter img{

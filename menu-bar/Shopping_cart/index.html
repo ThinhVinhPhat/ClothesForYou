@@ -227,6 +227,32 @@
             </div>
 
             <div class="product-info">
+                <div class="mb-3" id="product_holder">
+
+                    <!-- <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
+                        <div class="col-1 d-flex justify-content-center" >
+    
+                            <img src="" alt="" id="cart_img">
+    
+                        </div>
+                        <div class="col-5 d-flex justify-content-center flex-md-column">
+                           <div class="info" style="margin-left: 70px;">
+                            <p  id="cart_title"></p>
+                           </div>
+                        </div>
+                        <div class="col-2 mt-5">
+                        <strong  id="cart_price" ></strong>
+                        </div>
+                        <div class="col-2 mt-5 d-flex"   >
+                            <button id="remove">-</button>
+                            <p id="cart_stock" class="m-1">1</p>
+                            <button id="include">+</button>
+                        </div>
+                        <div class="col-2 mt-5" >
+                         <strong id="cart_total"></strong>
+                        </div>
+                    </div>
+                </div> -->
                 <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
                     <div class="col-1 d-flex justify-content-center">
                         <img src="./img/040124082_3tt__1_-01_18d8078c4aaa42d08bfff0c17c11894b_medium.webp" alt="" style="width: 100px;">
@@ -253,6 +279,7 @@
                         </strong>
                     </div>
                 </div>
+
 
                 <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
                     <div class="col-1 d-flex justify-content-center">
@@ -308,6 +335,8 @@
                 </div>
             </div>
 
+
+               
             <div class="pay d-flex ">
             <div class="left">
                 <input type="checkbox"> Xuất hóa đơn công ty
@@ -315,7 +344,7 @@
                 <p style="margin: 5px;">Chú thích cho cửa hàng</p>
                 <textarea name="" id="" cols="100" rows="5"></textarea>
             </div>
-            <div class="rigth" style="margin: 50px 100px 100px 300px; ">
+            <div class="rigth" style="margin: 50px 100px 100px 300px; "  id="cart_total">
                 <p style="width: 150%;">Tổng tiền    <strong>2,160,000₫	
                 </strong></p>
                <strong>Vận chuyển</strong>
@@ -446,7 +475,12 @@
     </div>
 
 
-    
+    <div id="signup" class="d-none"></div>
+    <div class="PE-picture-slide d-none">
+        <figure id="figure">
+      
+         </figure>
+    <button id="addcart" ></button>
 </body>
 <script src="./index.js"></script>
 

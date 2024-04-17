@@ -51,6 +51,7 @@ const SignatureRef = collection(db,"Signature")
 const q = query(collRef,where("deleted","==",false))
 const docsSnap =  await getDocs(collRef);
 
+const sq = query(SignatureRef,where("deleted","==",false))
 
 // get collection docs
 onSnapshot(q,(docs)=>{
@@ -424,27 +425,200 @@ Tranfer("Combo","Combo")
 
 const SignDocs = await getDocs(SignatureRef)
 
-
-const Sign_pic_holder = document.querySelectorAll(".signature-picture-slide .silde .main-picture .pic")
+const holder = document.createElement("div")
+const Sign_holder = document.querySelectorAll(".signature-picture-slide .silde")
 
 if(!SignDocs.empty){
-  Sign_pic_holder.forEach(holder=>{
-    holder.href = "./description/index.html"
-    const url = new URL(holder.href)
-  for(var i=0;i<SignDocs.length;i++){
-    console.log(SignDocs[i].id)
+
+    SignDocs.forEach(doc=>{
+      const silde = document.createElement("div")
+      silde.className = "slide"
+      if(doc.id !=null){  
+        silde.id = doc.id
+      
+      }
+      holder.appendChild(silde)
+    })
+
+}
+
+const holder_child = holder.children
+var i =0;
+Sign_holder.forEach(holder=>{
+  holder.id = holder_child[i].id;
+
+  i++;
+})
+
+console.log(Sign_holder)
+
+const a_pic = document.querySelectorAll(".signature-picture-slide .silde .pic")
+var j=0;
+a_pic.forEach(pic => {
+  var id = Sign_holder[j].id; 
+  pic.href = "./description/index.html"
+
+  const url = new URL(pic.href )
+
+  if(pic != null){
+    url.searchParams.set("id",id)
   }
-    holder.href = url
+  else{
+    url.searchParams.delete("id")
+  }
+  pic.href  = url
+
+  j++
+})
+
+Tranfer("Signature","Signature Clothes")
+
+// END SIGNATURE
+
+
+// SHOPPING CART
+const add_cart_func =  async (ref)=>{
+  const add_cart = document.getElementById("add_cart")
+  const current_stock = document.getElementById("stock")
+
+  add_cart.addEventListener("click", async ()=>{
+    const url = new URL(window.location.href)
   
+    const id = url.searchParams.get("id")
+  
+    try{
+      const DocRef = doc(db,ref,id);
+      const docSnap = await getDoc(DocRef)
+
+const img = document.createElement("img");
+img.src = `.${docSnap.data().img}`;
+img.alt = "Product Image";
+img.id = "cart_img";
+
+const title = document.createElement("p");
+title.innerText = docSnap.data().title;
+title.id = "cart_title";
+
+const price = document.createElement("strong");
+price.innerText = docSnap.data().price;
+price.id = "cart_price";
+
+const quantity = document.createElement("p");
+quantity.innerText = current_stock;
+quantity.classList.add("m-1");
+quantity.id = "cart_stock";
+
+
+const total = document.createElement("strong");
+total.innerText = 29000 * current_stock;
+total.id = "cart_total";
+
+
+
+  localStorage.setItem("img",img.src)
+  localStorage.setItem("title",title.innerHTML)
+  localStorage.setItem("price",price.innerHTML)
+  localStorage.setItem("quantity",quantity.innerHTML)
+  localStorage.setItem("total",total.innerHTML)
+  
+
+    alert("Thêm vào giỏ hàng thành công")
+    }
+    catch(err){
+      alert(err.message)
+    }
+
   })
 
 }
 
 
-console.log(Sign_pic_holder)
+add_cart_func("Signature")
+
+const cart_holder = document.getElementById("product_holder")
+
+
+if(cart_holder){
 
 
 
+const row = document.createElement("div");
+row.classList.add("row-xl-12", "d-flex", "justify-content-center", "mt-4", "mb-4");
 
+
+const colInfo = document.createElement("div");
+colInfo.classList.add("col-5", "d-flex", "justify-content-center", "flex-md-column");
+
+const colImg = document.createElement("div");
+colImg.classList.add("col-1", "d-flex", "justify-content-center");
+
+const img = document.createElement("img");
+img.src =  `../${localStorage.getItem("img")}`;
+img.alt = "Product Image";
+img.id = "cart_img";
+
+colImg.appendChild(img);
+row.appendChild(colImg);
+
+
+
+const info = document.createElement("div");
+info.classList.add("info");
+info.style.marginLeft = "70px";
+
+const title = document.createElement("p");
+title.innerText = localStorage.getItem("title");
+title.id = "cart_title";
+
+info.appendChild(title);
+colInfo.appendChild(info);
+row.appendChild(colInfo);
+
+const colPrice = document.createElement("div");
+colPrice.classList.add("col-2", "mt-5");
+
+const price = document.createElement("strong");
+price.innerText = localStorage.getItem("price");
+price.id = "cart_price";
+
+colPrice.appendChild(price);
+row.appendChild(colPrice);
+
+const colQuantity = document.createElement("div");
+colQuantity.classList.add("col-2", "mt-5", "d-flex");
+
+const removeBtn = document.createElement("button");
+removeBtn.innerText = "-";
+removeBtn.id = "remove";
+
+const quantity = document.createElement("p");
+quantity.innerText = localStorage.getItem("stock");
+quantity.classList.add("m-1");
+quantity.id = "cart_stock";
+
+const includeBtn = document.createElement("button");
+includeBtn.innerText = "+";
+includeBtn.id = "include";
+
+colQuantity.appendChild(removeBtn);
+colQuantity.appendChild(quantity);
+colQuantity.appendChild(includeBtn);
+row.appendChild(colQuantity);
+
+const colTotal = document.createElement("div");
+colTotal.classList.add("col-2", "mt-5");
+
+const total = document.createElement("strong");
+total.innerText = localStorage.getItem("total");
+total.id = "cart_total";
+
+colTotal.appendChild(total);
+row.appendChild(colTotal);
+
+
+holder.appendChild(row);
+
+
+}
 
 

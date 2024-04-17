@@ -656,15 +656,13 @@ header
     border-radius: 10px;
 }
 
-
-
 @media only screen and (max-width: 46.1875em) {
 
 
     body {
-        width: 430px;
+        width: 330px;
       
-        margin: auto;
+     
     }
 
     .container-2 {
@@ -739,11 +737,22 @@ header
     
 
     .category-price{
+        display: inline;
+        justify-content: center;
+        width: 100%;
+    }
+    .category-price button{
+        display: inline;
+        justify-content: center;
         width: 100%;
     }
 
+    
+
     .resigter{
         flex-direction: column;
+        width: 450px;
+        margin-left: -30px;
     }
 
     .resigter img{
@@ -770,12 +779,13 @@ header
         margin-left: -20px;
         
     }
-    
-    .category-choice .buttons{
-        display: flex;
-        flex-direction: column;
-        margin-left: -20px;
+    .category-choice .buttons {
+   display: inline;
+   justify-content: left;
+  
     }
+    
+   
 
     .frist-img img {
         width: 130%;
