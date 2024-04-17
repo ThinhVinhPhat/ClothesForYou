@@ -434,3 +434,123 @@ header
     border: 1px solid gray;
     border-radius: 10px;
 }
+
+/*Màn hình điện thoại < 740px */
+@media only screen and (max-width: 46.1875em) {
+
+
+    body {
+        width: 340px;
+      
+       
+    }
+
+    .container-2 {
+        width:  14px;
+        margin-left: 10px;
+    }
+
+    .women-skirt {
+        flex-direction: column;
+    }
+
+    .container-2 nav{
+        width: 3000%;
+    }
+
+    .scrolling-text {
+        width: 4000%;
+    }
+    header{
+        left: 0;
+       
+        width: 5%;
+        justify-content: start;
+        padding: 0%;
+    }
+
+    .picture-slide {
+     width: 1000px;
+    }
+    .picture-container {
+        width: 1000px;
+        margin-left: -30px;
+    
+    }
+    .picture-container img{
+     width: 500px;
+    
+    }
+    .silde {
+        width: 1000px;
+    }
+    
+    .category-list{
+        flex-direction: column;
+        margin-left: -80px;
+    }
+
+    .advtisment-silde{
+        flex-direction: column;
+        margin-left: -20px;
+    }
+    .advtisment-silde img{
+      width: 350px;
+    }
+
+    .PE-header {
+        margin-left: 10px;
+    }
+    .PE-picture-container  {
+        width: 150%;
+        margin-left: -50px;
+        margin-top: 10px;
+    }
+    
+
+    .ads_1 {
+        margin-left: -10px;
+        margin-bottom: 50px;
+    }
+
+    .ads-line {
+      display: none;
+    }
+
+    .play-button {
+        left: 40%;
+        top: -50%;
+    }
+
+    .signature-clothes{
+        margin-left: 55px;
+    }
+
+    .signature-picture-slide{
+            
+        animation: 20s signature-slider infinite;
+    }
+
+
+    .resigter{
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .resigter img{
+        width: 400px;
+    }
+
+    .resigter-form {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .resigter-form input {
+        width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
