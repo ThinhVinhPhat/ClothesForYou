@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title >ClothesForYou</title>
+        <link rel="shortcut icon" href="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/409699970_216526811494866_5558585310836139295_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeE6x8fCtOnUT5TytxYumr1sBCYUk92cwF0EJhST3ZzAXSUgntFaiJ9aTKaxqNSLMT8K-aLhzTn5QYyGlejtI83_&_nc_ohc=sKOzTX3qGlYAX_8vB7N&_nc_ht=scontent.fsgn2-5.fna&oh=00_AfAasizmrvpEIBq400n1m_q6dJ6FxlFvT2L8WHgiuEgghQ&oe=659207C9" />
+        <link rel="stylesheet" href="../main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/85b8914781.js" crossorigin="anonymous"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+        <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    
+    </head>
+<body>
+    <div class="container">
+
+        <header>
+
+    
+
+            <nav class="navbar navbar-expand-lg bg-body-tertiary w-100 " style="width: 220%;" id="menu" >
+         <img src="../." alt="">
+         <div class="container-fluid">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             
+             
+             
+             <div class="collapse navbar-collapse" id="navbarScroll">
+                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                     <li class="nav-item">
+                 <a class="nav-link " aria-current="page" href="https://thinhvinhphat.github.io/ClothesForYou/"> <i class="fa-solid fa-house" style="font-size: 20px;"></i></a>
+             </li>
+             
+             <li class="nav-item dropdown">
+                 <a class="nav-link fw-bold "  href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Men/index.html"  aria-expanded="false">
+                   Nam
+                 </a>
+                 <ul class="dropdown-menu">
+                     <div class="row">
+                         <div class="col">
+                             <li><h2 class="dropdown-header">Sơ mi</h2></li>
+                             <li><a class="dropdown-item" href="#">Sơ mi dài tay</a></li>
+                             <li><a class="dropdown-item" href="#">Sơ mi ngắn tay</a></li>
+                             <li><a class="dropdown-item" href="#">Sơ mi ký dạ</a></li>
+                             <li><a class="dropdown-item" href="#">Sơ mi dạ</a></li>
+                             <li><a class="dropdown-item" href="#">Sơ mi trắng</a></li>
+                     
+                         </div>
+                         <div class="col">
+                             <li><h2 class="dropdown-header">Quần nam</h2></li>
+                             <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                             <li><a class="dropdown-item" href="#">Quần kaki</a></li>
+                             <li><a class="dropdown-item" href="#">Quần short</a></li>
+                         </div>
+                     <div class="col">
+                         <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                         <li><a class="dropdown-item" href="#">Áo len nam</a></li>
+                         <li><a class="dropdown-item" href="#">Tất nam</a></li>
+                         <li><a class="dropdown-item" href="#">Đồ lót nam</a></li>
+                     </div>
+                     
+                     
+                 </div>
+                 
+             </ul>
+         </li>
+         
+         <li class="nav-item dropdown">  
+             <a class="nav-link fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Women/"   aria-expanded="false">
+                 Nữ
+             </a>
+             <ul class="dropdown-menu">
+                   <div class="row">
+                       <div class="col">
+                           <li><h2 class="dropdown-header">Sơ mi nữ</h2></li>
+                       <li><a class="dropdown-item" href="#">Sơ mi nữ dài tay</a></li>
+                       <li><a class="dropdown-item" href="#">Sơ mi nữ ngắn tay</a></li>
+                       <li><a class="dropdown-item" href="#">Sơ mi nữ tay lợ</a></li>
+                     </div>
+                     <div class="col">
+                         <li><h2 class="dropdown-header">Đầm </h2></li>
+                         <li><a class="dropdown-item" href="#">Đầm nữ</a></li>
+                         <li><a class="dropdown-item" href="#">Đầm đi biển</a></li>
+                         <li><a class="dropdown-item" href="#">Đầm công sở</a></li>
+                         <li><a class="dropdown-item" href="#">Đầm dạo phố</a></li>
+                     </div>
+                     <div class="col">
+                         <li><h2 class="dropdown-header">Quần nữ </h2></li>
+                         <li><a class="dropdown-item" href="#">Quần âu</a></li>
+                         <li><a class="dropdown-item" href="#">Quần short</a></li>
+                         
+                     </div>
+                     
+                     
+                     <div class="col">
+                         <li><h2 class="dropdown-header">Sản phẩm khác</h2></li>
+                         <li><a class="dropdown-item" href="#">Áo phông nữ</a></li>
+                         <li><a class="dropdown-item" href="#">Phụ kiện</a></li>
+                         <li><a class="dropdown-item" href="#">Chăn thu đông</a></li>
+                     </div>
+
+                     
+                 </div>
+                 
+             </ul>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Collection/index.html" >Bộ sưu tập</a>
+         </li>
+         
+         <li class="nav-item">
+             <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
+         </li>
+         
+         <li class="nav-item">
+                 <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/index.html" class="nav-link fw-bold text-danger">Khuyến mãi</a>
+                 
+             </li>
+             
+         </ul>
+     </div>
+     
+     <div class="logo d-flex " style="width: 100px; position: absolute; left:50%;">
+         <img src="./img/Clothes.jpg" alt="" style="width: 50px;">
+     </div>
+     
+         
+     
+     <div class="collapse navbar-collapse d-inline-block justify-content-end" style="align-items: end;" id="collapsibleNavId">
+         <form class="d-flex position-relative" role="search">
+             <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+         </form>
+         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+             <li class="nav-item d-flex" id="signin">
+                 <div class="input"></div>
+                 <a class="nav-link active fw-bold" id="node1" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                 >Đăng nhập
+                 <span class="visually-hidden">(current)</span></a
+                 >
+                              
+                                 <a class="nav-link active fw-bold" id="node2" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                 >/ Đăng ký
+                                 <span class="visually-hidden">(current)</span></a
+                                 >
+                             </li>
+                            
+                             
+                             
+                         </form>
+                     </div>
+                     
+                     
+                     <div class="find_and_addcart">
+                         <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Shopping_cart/index.html"  class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a>
+                         
+                     </div>
+                     
+
+                     
+                 </div>
+                 
+             </nav>
+             
+             <div class="scrolling-text">
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+                 <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
+             </div>
+             
+         </header>
+
+
+
+                   
+<div class="gototopbtn">
+    <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
+
+<div class="links">
+    <div onclick="autoAdsMaxLeadOpenExternalLink('https://m.me/1770694423178098?ref=257e0254-88bb-4b2f-9485-7dee6aea2b95');autoAdsMaxLeadSaveAction('facebook','action');" class=" ">
+        <a href=""><img src="../../img/tải xuống.png" alt="" class="m-1">  </a>   
+        <a href=""> <img src="../..//img/tải xuống (1).png" alt="" class="m-1">  </a>   
+        <a href="">  <img src="../../img/tải xuống (2).png" alt="">  </a>  
+    </div>
+</div>
+
+
+<div class="main_container" style="margin-bottom: 150px;">
+    <div class=" d-flex justify-content-start p-2" style="margin-top: 150px;">
+        <a href="https://thinhvinhphat.github.io/ClothesForYou/" onfocus="" class="text-decoration-none text-secondary"><i class="fa-solid fa-house text-decoration-none"></i> Homepage</a>
+        <p class="fw-bold">/SALE</p>
+    
+    </div>
+    
+    <div class="mb-3 d-flex justify-content-center" style="align-items: center; width: 110%;">
+        <img src="../../img/artboard_1_7ffdd8545d9c4ebba8b48e2ad323f807_large.webp" alt="" class="w-50">
+    </div>
+    
+    <div class="m-3 d-flex justify-content-evenly" style="align-items: center; width: 110%;">
+        <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/index.html" class="text-decoration-none text-secondary"><h4>MUA 3 TÍNH TIỀN 2</h4></a>
+        <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/individuals/Somi.html" class="text-decoration-none text-secondary"><h4>SALE SƠ MI NAM</h4></a>
+        <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/individuals/Quanshort.html" class="text-decoration-none text-secondary"><h4>COMBO ÁO PHÔNG + QUẦN SHORT</h4></a>
+        <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/individuals/Combo.html" class="text-decoration-none text-dark"><h4>COMBO 798K</h4></a>
+    </div>
+    
+    <div class="mb-3">
+        <div class="signature-picture-slide row-8 d-flex justify-content-between">
+
+            <div class="col-2 m-1">
+                <div class="silde">
+                    <div class="main-picture">
+                        <a href="" class="pic "><img  src="../img/combo789/1.webp" style="width: 60%;" alt=""></a>    
+                        <p class="position-absolute top-0 text-bg-danger p-2" style="border-radius: 40px; left: 54%;">-25%</p>
+                    </div>
+               
+
+                <div class="pro-decription ">
+
+                    <div class="sub-img d-flex w-100">
+                        <img src="../img/combo789/1.1.webp" alt="">
+                        <img src="../img/combo789/1.2.webp" alt="">
+          
+      
+                    </div>
+
+                    <div class="product-name">
+                      <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+                    </div>
+
+                    <div class="price">
+                        <p>1,570,910đ</p>
+                        <div class="price-voucher">
+                        
+                            <p>1,963,637đ</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="buy ">
+                    <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+                   </div>
+                </div>
+
+            </div>
+
+            <div class="col-2 m-1">
+                <div class="silde">
+                    <div class="main-picture">
+                        <a href="" class="pic "><img  src="../img/combo789/2.webp" style="width: 60%;" alt=""></a>    
+                        <p class="position-absolute top-0 text-bg-danger p-2" style="border-radius: 40px; left: 54%;">-25%</p>
+                    </div>
+               
+
+                <div class="pro-decription ">
+
+                    <div class="sub-img d-flex w-100">
+                        <img src="../img/combo789/2.1.webp" alt="">
+                        <img src="../img/combo789/2.2.webp" alt="">
+                        <img src="../img/combo789/2.3.webp" alt="">
+        
+      
+                    </div>
+
+                    <div class="product-name">
+                      <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+                    </div>
+
+                    <div class="price">
+                        <p>1,570,910đ</p>
+                        <div class="price-voucher">
+                        
+                            <p>1,963,637đ</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="buy ">
+                    <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+                   </div>
+                </div>
+
+            </div>
+
+            <div class="col-2 m-1">
+                <div class="silde">
+                    <div class="main-picture">
+                        <a href="" class="pic "><img  src="../img/combo789/3.webp" style="width: 60%;" alt=""></a>    
+                        <p class="position-absolute top-0 text-bg-danger p-2" style="border-radius: 40px; left: 54%;">-25%</p>
+                    </div>
+               
+
+                <div class="pro-decription ">
+
+                    <div class="sub-img d-flex w-100">
+                        <img src="../img/combo789/3.1.webp" alt="">
+                        <img src="../img/combo789/3.2.webp" alt="">
+                        <img src="../img/combo789/3.3.webp" alt="">
+
+      
+                    </div>
+
+                    <div class="product-name">
+                      <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+                    </div>
+
+                    <div class="price">
+                        <p>1,570,910đ</p>
+                        <div class="price-voucher">
+                        
+                            <p>1,963,637đ</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="buy ">
+                    <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+                   </div>
+                </div>
+
+            </div>
+
+            <div class="col-2 m-1">
+                <div class="silde">
+                    <div class="main-picture">
+                        <a href="" class="pic "><img  src="../img/combo789/4.webp" style="width: 60%;" alt=""></a>    
+                        <p class="position-absolute top-0 text-bg-danger p-2" style="border-radius: 40px; left: 54%;">-25%</p>
+                    </div>
+               
+
+                <div class="pro-decription ">
+
+                    <div class="sub-img d-flex w-100">
+                        <img src="../img/combo789/4.1.webp" alt="">
+                        <img src="../img/combo789/4.2.webp" alt="">
+                        <img src="../img/combo789/4.3.webp" alt="">
+                
+      
+                    </div>
+
+                    <div class="product-name">
+                      <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+                    </div>
+
+                    <div class="price">
+                        <p>1,570,910đ</p>
+                        <div class="price-voucher">
+                        
+                            <p>1,963,637đ</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="buy ">
+                    <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+                   </div>
+                </div>
+
+            </div>
+
+
+
+</div>
+
+
+
+
+        <div class="mt-5 d-flex justify-content-center" style="width: 110%;">
+            <button class="btn btn-dark">Xem Thêm</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="mb-3">
+    <h4>SẢN PHẨM HAY ĐƯỢC MUA CÙNG</h4>
+    <div class="row-10 d-flex justify-content-between mt-3" style="width: 110%;">
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010119069_ah197_e_3589145c992f49b3b952027df33adc76_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010119441_ah239_c_e9a26581d7d84637b1c925083c819a0b_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010120003_ah238-02_b1f586f7a34343e9836cc6c22beff264_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010122406_8-01_c85e6534c4c34bc7943ac9a8d9e7ac87_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010123056ol_15_b-01_efb21bb623274000b50b02e46cf59660_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row-10 d-flex justify-content-between mt-3" style="width: 110%;">
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010123056ol_15_b-01_efb21bb623274000b50b02e46cf59660_master.webp" alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010123107ol_35_h-01_07f342f25e2b4eec897f9513182ede47_master.webp"  alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010123158ol_68_b-01_9142d3a4efd243a298751d95cae220fe_master.webp"  alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010123158ol_68_b-01_9142d3a4efd243a298751d95cae220fe_master.webp"  alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="silde ">
+                <div class="main-pic d-flex justify-content-center">
+                    <img src="../../../img/New folder/Related/010222115gz__2_-01_a3485a35ed7b43bc94080091e01d4592_master.webp"  alt="" style="width: 60%;">
+
+                </div>
+               
+                
+            <div class="product-name mt-3">
+                <a href="">  ÁO KHOÁC NAM MAY10 MÃ 030122261 JK002</a>
+              </div>
+  
+              <div class="price mt-3">
+                  <p>1,570,910đ</p>
+                  <div class="price-voucher">
+                  
+                      <p>1,963,637đ</p>
+                  </div>
+              </div>
+              
+              <div class="buy ">
+                <a href=" " class="m-2 d-flex justify-content-center text-decoration-none text-bg-dark">   Mua Nhanh</a>
+               </div>
+
+            </div>
+        </div>
+
+
+    </div>  
+
+
+</div>
+
+
+
+
+
+
+<div class="lines">
+
+</div>
+
+
+    <div v class="resigter" id-="resigter-site" >
+
+        <div class="resigter-image">
+            <img src="https://cdn.onmarketer.net/upload/editor/126008/10052022112130-1397963b08e1c9bf90f0.jpg" alt="">
+        </div>
+
+        <div class="resigter-form">
+            <h2>ĐĂNG KÝ NHẬN BẢN TIN</h2>
+        <p>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp dẫn</p>
+            <div class="form">
+                <form action="">
+            <p>Họ và tên</p>
+            <input type="text" placeholder="Họ tên đầy đủ"> 
+            <p>Số điện thoại</p>
+            <input type="text" placeholder="Số điện thoại">
+            <p>Email</p>
+            <input type="text" placeholder="Email">
+
+            <div class="resgiter-button">
+
+                <button>Tư vấn cho tôi ngay</button>
+            </div>
+
+                </form>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+<div class="lines-2">
+
+</div>
+
+<div class="footer">
+<div class="first-column">
+    <h3>TMĐT ClothesForYou</h3>
+    <form action="">
+        <ul>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="">Điều khoản sử dụng</a></li>
+            <li><a href="">Chính sách bảo mật</a></li>
+            <li><a href="">Chính sách giao hàng</a></li>
+            <li><a href="">Chính sách thanh toán</a></li>
+            <li><a href="">Chính sách đổi trả bảo hành</a></li>
+        </ul>
+    </form>
+
+
+</div>
+
+<div class="second-column">
+    <h3>DANH MỤC SẢN PHẨM</h3>
+    <form action="">
+        <ul>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Sản phẩm mới</a></li>
+            <li><a href="">Thời trang Nam</a></li>
+            <li><a href="">Thời trang Nữ</a></li>
+            <li><a href="">Loại áo dài</a></li>
+            <li><a href="">Bộ sưu tập</a></li>
+            <li><a href="">Sản phẩm khác</a></li>
+        </ul>
+    </form>
+</div>
+
+<div class="third-column">
+    <h3>LIÊN KẾT WEBSITE</h3>
+    <form action="">
+        <ul>
+            <li><a href="">Website Tổng công ty May 10</a>
+            </li>
+            <li><a href="">Website Khách sạn GarcoDragon</a></li>
+            <li><a href="">Website Siêu thị M10 Mart</a></li>
+            <li><a href="">Website Cao đẳng Nghề Long Biên</a></li>
+            <li><a href="">Liên hệ May đồ</a></li>
+        </ul>
+    </form> 
+</div>
+
+<div class="fourth-column">
+    <h3>Kết nối mạng xã hội</h3>
+<a href="" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+<a href="" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+<a href="" class="instagram"><i class="fa-brands fa-x-twitter"></i></a>
+    <h3>
+        Kết nối sàn TMĐT
+    </h3>
+    <div class="store-link">
+
+        <a href="" ><img src="/ClothesForYou/img/shopee_small.webp" alt=""></a>
+        <a href="" class="tiki"><img src="/ClothesForYou/img/tiki__1__small.webp" alt=""></a>
+        <a href="" class="lazada"><img src="/ClothesForYou/img/lazada_small.webp" alt=""></a>
+        <a href=""><img src="/ClothesForYou/img/logo_sendo_small.webp" alt=""></a>
+      
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+    </div>
+
+
+  
+
+
+<div id="total_shown"></div>
+<div class="input"></div>
+<div id="signup" class="d-none"></div>
+<div class="PE-picture-slide d-none">
+    <figure id="figure">
+  
+     </figure>
+<button id="add_cart" ></button>
+
+</body>
+
+<script src="./index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="../../backend/dist/bundle.js"></script>
+</html>

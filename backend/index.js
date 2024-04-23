@@ -46,6 +46,7 @@ const auth = getAuth(app)
 const collRef = collection(db,'Clothes')
 const ComboRef = collection(db,"Combo")
 const SignatureRef = collection(db,"Signature")
+const CartRef = collection(db,"Cart")
 
 // queries
 const q = query(collRef,where("deleted","==",false))
@@ -444,13 +445,11 @@ if(!SignDocs.empty){
 
 const holder_child = holder.children
 var i =0;
+
 Sign_holder.forEach(holder=>{
   holder.id = holder_child[i].id;
-
   i++;
 })
-
-console.log(Sign_holder)
 
 const a_pic = document.querySelectorAll(".signature-picture-slide .silde .pic")
 var j=0;
@@ -477,52 +476,32 @@ Tranfer("Signature","Signature Clothes")
 
 
 // SHOPPING CART
-const add_cart_func =  async (ref)=>{
-  const add_cart = document.getElementById("add_cart")
-  const current_stock = document.getElementById("stock")
+const current_stock = document.getElementById("stock")
+var match_title;
 
-  add_cart.addEventListener("click", async ()=>{
+const add_cart_func =  async (ref,stock)=>{
+  const add_cart = document.getElementById("add_cart")
+
+  add_cart.addEventListener("click", async()=>{
     const url = new URL(window.location.href)
-  
+    
     const id = url.searchParams.get("id")
   
     try{
       const DocRef = doc(db,ref,id);
       const docSnap = await getDoc(DocRef)
 
-const img = document.createElement("img");
-img.src = `.${docSnap.data().img}`;
-img.alt = "Product Image";
-img.id = "cart_img";
-
-const title = document.createElement("p");
-title.innerText = docSnap.data().title;
-title.id = "cart_title";
-
-const price = document.createElement("strong");
-price.innerText = docSnap.data().price;
-price.id = "cart_price";
-
-const quantity = document.createElement("p");
-quantity.innerText = current_stock;
-quantity.classList.add("m-1");
-quantity.id = "cart_stock";
-
-
-const total = document.createElement("strong");
-total.innerText = 29000 * current_stock;
-total.id = "cart_total";
-
-
-
-  localStorage.setItem("img",img.src)
-  localStorage.setItem("title",title.innerHTML)
-  localStorage.setItem("price",price.innerHTML)
-  localStorage.setItem("quantity",quantity.innerHTML)
-  localStorage.setItem("total",total.innerHTML)
-  
-
-    alert("Thêm vào giỏ hàng thành công")
+      addDoc(CartRef , {
+            title: docSnap.data().title,
+            price: docSnap.data().price,
+            quantity: Number(current_stock.innerHTML),
+            img:  docSnap.data().img,
+            total: parseInt(docSnap.data().price.replace(/[₫,.]/g, '') ) * Number(current_stock.innerHTML)
+          }).then(() => {
+            match_title = docSnap.data().title
+            alert("Thêm vào giỏ hàng thành công")
+            window.location.reload()
+          })
     }
     catch(err){
       alert(err.message)
@@ -531,94 +510,108 @@ total.id = "cart_total";
   })
 
 }
+add_cart_func("Signature",current_stock)
+add_cart_func("Clothes",current_stock)
+add_cart_func("Combo",current_stock)
 
-
-add_cart_func("Signature")
 
 const cart_holder = document.getElementById("product_holder")
+const total_shown = document.getElementById("total_show")
+var sum =0;
 
 
-if(cart_holder){
-
-
-
-const row = document.createElement("div");
-row.classList.add("row-xl-12", "d-flex", "justify-content-center", "mt-4", "mb-4");
-
-
-const colInfo = document.createElement("div");
-colInfo.classList.add("col-5", "d-flex", "justify-content-center", "flex-md-column");
-
-const colImg = document.createElement("div");
-colImg.classList.add("col-1", "d-flex", "justify-content-center");
-
-const img = document.createElement("img");
-img.src =  `../${localStorage.getItem("img")}`;
-img.alt = "Product Image";
-img.id = "cart_img";
-
-colImg.appendChild(img);
-row.appendChild(colImg);
-
-
-
-const info = document.createElement("div");
-info.classList.add("info");
-info.style.marginLeft = "70px";
-
-const title = document.createElement("p");
-title.innerText = localStorage.getItem("title");
-title.id = "cart_title";
-
-info.appendChild(title);
-colInfo.appendChild(info);
-row.appendChild(colInfo);
-
-const colPrice = document.createElement("div");
-colPrice.classList.add("col-2", "mt-5");
-
-const price = document.createElement("strong");
-price.innerText = localStorage.getItem("price");
-price.id = "cart_price";
-
-colPrice.appendChild(price);
-row.appendChild(colPrice);
-
-const colQuantity = document.createElement("div");
-colQuantity.classList.add("col-2", "mt-5", "d-flex");
-
-const removeBtn = document.createElement("button");
-removeBtn.innerText = "-";
-removeBtn.id = "remove";
-
-const quantity = document.createElement("p");
-quantity.innerText = localStorage.getItem("stock");
-quantity.classList.add("m-1");
-quantity.id = "cart_stock";
-
-const includeBtn = document.createElement("button");
-includeBtn.innerText = "+";
-includeBtn.id = "include";
-
-colQuantity.appendChild(removeBtn);
-colQuantity.appendChild(quantity);
-colQuantity.appendChild(includeBtn);
-row.appendChild(colQuantity);
-
-const colTotal = document.createElement("div");
-colTotal.classList.add("col-2", "mt-5");
-
-const total = document.createElement("strong");
-total.innerText = localStorage.getItem("total");
-total.id = "cart_total";
-
-colTotal.appendChild(total);
-row.appendChild(colTotal);
-
-
-holder.appendChild(row);
-
-
+function formatCurrency(value) {
+  return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
 }
 
 
+if(cart_holder){  
+  const Cart_Docs = await getDocs(CartRef)
+  
+  if(!Cart_Docs.empty) {
+    Cart_Docs.forEach(doc=>{
+
+      if(doc.data().title === localStorage.getItem("title")){
+        doc.data().quantity += 1;
+      }
+      else{
+        const row = document.createElement("div");
+        row.classList.add("row-xl-12", "d-flex", "justify-content-center", "mt-4", "mb-4");
+    
+        row.innerHTML = `
+          <div class="col-1 d-flex justify-content-center" >
+          
+        <img src="../.${doc.data().img}" alt="" id="cart_img" style="width: 100px;">
+      
+        </div>
+        <div class="col-5 d-flex justify-content-center flex-md-column">
+        <div class="info" style="margin-left: 70px;">
+          <p  id="cart_title" style="width:400px;">${doc.data().title}>
+        </div>
+        </div>
+        <div class="col-2 mt-5">
+        <strong  id="cart_price" >${doc.data().price}</strong>
+        </div>
+        <div class="col-2 mt-4  p-2"   >
+          <p id="cart_stock" aria-valuemin="0" class="p-2 fs-5" aria-valuemax="10">${doc.data().quantity}</p>
+        </div>
+        <div class="col-2 mt-5" >
+        <strong id="cart_total">${doc.data().total}₫</strong>
+        </div>
+        `
+        sum+=doc.data().total
+        cart_holder.appendChild(row)
+  
+      }
+
+
+     
+    })
+  
+    total_shown.innerHTML = formatCurrency(sum) 
+  }
+}
+// end shopping cart
+
+
+// payment 
+
+const pay_holder = document.querySelector(".pay_holder")
+
+if(pay_holder){
+  const Cart_Docs = await getDocs(CartRef)
+  const pay_total = document.querySelectorAll(".total_payment")
+  var sum =0 ;
+  if(!Cart_Docs.empty) {
+    Cart_Docs.forEach(doc=>{
+      const row = document.createElement("div")
+      row.className = "m-3 d-flex justify-content-evenly"
+
+      row.innerHTML = 
+      ` 
+      <img src=".${doc.data().img}"" style="width:  10%; border: 5px solid white; " class="img">
+  
+      <div class="detail d-flex">
+          <div class="detail-1">
+
+              <p style="width: 60%; ">${doc.data().title}
+
+                  <p class="form-text text-muted ">S / 100%COTTON</p>
+              </p>
+          </div>
+
+          <p>SL: ${doc.data().quantity}</p>
+      </div> 
+  `
+      sum += doc.data().total
+
+      pay_holder.appendChild(row)
+    })
+    pay_total.forEach(pay =>{
+      pay.innerHTML = formatCurrency(sum) 
+
+    })
+
+  }
+}
+//end payment

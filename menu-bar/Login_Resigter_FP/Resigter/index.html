@@ -20,13 +20,10 @@
 
 </head>
 <body>
-    <div class="main-container">
-        <div class="header-container">
-           
-            <header>
 
-           
-                <div class="container-2">
+        
+    <div class="container-fluid w-100 position-relative">
+
                     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu" >
                         <img src="../." alt="">
                         <div class="container-fluid">
@@ -122,38 +119,38 @@
                               <li class="nav-item">
                                 <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
                               </li>
-                         
+                              
+                              <li class="nav-item">
+                                <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/index.html" class="nav-link fw-bold text-danger">Khuyến mãi</a>
+    
+                              </li>
                              
                          
                             </ul>
                         </div>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                           
-                        </form>
-                     
-                        <div class="login_resigter">
-                                    <div class="collapse navbar-collapse" id="collapsibleNavId">
-                                        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                                            <li class="nav-item d-flex">
-                                                <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
-                                                    >Đăng nhập
-                                                    <span class="visually-hidden">(current)</span></a
-                                                >
-                                             
-                                                <a class="nav-link active fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
-                                                    >/ Đăng ký
-                                                    <span class="visually-hidden">(current)</span></a
-                                                >
-                                            </li>
-                                           
-                                         
-                                             
-                                        </form>
-                                    </div>
-                                </div>
-                            
+                        <div class="collapse navbar-collapse d-inline-block justify-content-center" style="align-items: end; width:5%;" id="collapsibleNavId">
+                            <form class="d-flex position-relative" role="search">
+                                <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-info" id="search_icon" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li class="nav-item d-flex" id="signin">
+                                    <div class="input"></div>
+                                    <a class="nav-link active fw-bold" id="node1" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login" aria-current="page"
+                                        >Đăng nhập
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                 
+                                    <a class="nav-link active fw-bold" id="node2" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Resigter" aria-current="page"
+                                        >/ Đăng ký
+                                        <span class="visually-hidden">(current)</span></a
+                                    >
+                                </li>
+                               
+                             
+                                 
+                            </form>
+                        </div>
                                 <div class="find_and_addcart">
                                     <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Shopping_cart/index.html"  class="add-cart" ><i class="fa-solid fa-cart-shopping"></i></a>
                                     <div class="cart-page">
@@ -167,9 +164,8 @@
     
                         </div>
     
-                    </div>
                 </nav>
-                <div class="scrolling-text">
+                <div class="scrolling-text w-100">
                     <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
                     <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
                     <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
@@ -181,13 +177,13 @@
                     <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
                     <p class="text">CLOTHES FOR YOU- CHOOSE YOUR STYLE</p>
                 </div>
-            </div>
-            </header>
+          
+        
 
             <div class="gototopbtn">
                 <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
             </div> 
-        </div>
+      
 
 
         <div class="menu-header">
@@ -211,7 +207,7 @@
                     <input type="text" name="email" placeholder="Email" input>
                 </div>
                 <div class="name">
-                    <div class="first-name">
+                    <div class="first-name" >
                         <p>Họ</p>
                         <input type="text" name="fristname"  placeholder="Họ" input>
                     </div>
@@ -232,7 +228,7 @@
                 
             </form>
 
-            <div class="buttons">
+            <div class="buttons w-100 m-0 " style="align-items: center;">
                 <a href="https://thinhvinhphat.github.io/ClothesForYou/">Trở về</a>
                 <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/Login_Resigter_FP/Login">Đăng nhập</a>
             </div>
@@ -282,7 +278,6 @@
 
         </div>
 
-    </div>
     <div class="lines">
 
     </div>
@@ -350,7 +345,9 @@
           
         </div>
     </div>
-
+</div>
+</div>
+           
     <script src="./index.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>

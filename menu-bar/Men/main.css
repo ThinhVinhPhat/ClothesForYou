@@ -1,18 +1,8 @@
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-html {
-    display: table;
-    margin: auto;
-}
-
-body {
-  
-    vertical-align: middle;
-    font-family: Arial, Helvetica, sans-serif;
-}
 header 
 {
     position: fixed;

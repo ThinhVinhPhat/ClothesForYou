@@ -1,18 +1,7 @@
-
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
-body {
-    max-width: 1240px;
-    vertical-align: middle;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box  ;
 }
 
 header 
@@ -28,22 +17,11 @@ header
     transition: 0.6s;
     padding: 0px 100px;
     z-index: 10000000;
-    margin: auto;
+    
 
 }
 
-.container-2 {
-    width: 1500px;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-}
-
-.container-2 a{
-    transition: color 0.3s ease;
-}
-
-.container-2 a:hover{
+header  a:hover{
     color: #655cf0af;
 }
 
@@ -74,7 +52,7 @@ header
       pointer-events: none;
     
   }
-  .dropdown-menu {
+.dropdown-menu {
     width: 700px !important;
     height: 250px !important;
 }
@@ -281,13 +259,6 @@ header
 }
 
 
-
-.category-list {
-    display: flex;
-    padding: 50px;
-   justify-content: center;
-}
-
 .category-list img {
     padding: 10px;
     transition: -webkit-transform 0.25s ease;
@@ -299,25 +270,7 @@ header
     transform: scale(1.05);
 }
 
-.category-list h2 {
-    display: flex;
-    justify-content: center;
-}
 
-.category-list .aodai{
-    width: 420px;
-}
-
-
-
-.PE-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    padding: 10px;
-}
 
 .PE-picture-container {
     position: relative;
@@ -329,7 +282,6 @@ header
     position: relative;
     width: 1500px;
     margin-left: 40px;
-    height: 500px;
     overflow: hidden;
    
    
@@ -421,25 +373,6 @@ header
     color: white;
 }
 
-.adv-header{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin-top: -100px;
-    background-color:black;
-    color: white;
-}
-
-.advtisment-silde {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-}
-
-.ads_1 {
-    margin-left: 30px;
-   position: relative;
-}
 
 .ads_1 img{
     transition: -webkit-transform 0.25s ease;
@@ -450,10 +383,7 @@ header
    -webkit-transform: scale(2); 
    transform: scale(1.05);
 }
-.ads_2 {
-   
-   position: relative;
-}
+
 .ads_2 img{
     transition: -webkit-transform 0.25s ease;
     transition: transform 0.25s ease;
@@ -464,91 +394,15 @@ header
    transform: scale(1.05);
 }
 
-.detail_1 {
-    width: 600px;
-    font-size: 20px;
-    margin-top: 10px;
-}
-.detail_1  a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-.detail_1  a:hover{
-    color: lightskyblue;
-}
 
-.detail_2 {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: 20px;
-}
-.detail_2  a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-.detail_2 a:hover{
-    color: lightskyblue;
-}
-
-.ads-line {
-    margin: 100px;
-    margin-top: -30px;
-    width: 3px;
-    height: 400px;
-    background-color: blue;
-    border-radius: 20px;
-}
-
-.ads_1 .play-button {
-    position: absolute;
-    top: 150px; 
-    right: 280px;
-    color: white;
-    cursor: pointer;
-}
-.ads_1 .play-button i {
-   font-size: 50px;
-   transition: color 0.3s ease;
-}
 
 .ads_1.play-button i:hover {
     color: black;
 }
 
-.ads_2 .play-button {
-    position: absolute;
-    top: 150px; 
-    right: 280px;
-    color: white;
-    cursor: pointer;
-}
 
-.ads_2 .play-button i {
-    font-size: 50px;
-    transition: color 0.3s ease;
- }
- 
- .ads_2 .play-button i:hover {
-     color: black;
- }
-
-.skirt-header {
-    display: flex;
-    justify-content: center;
-}
-.women-skirt {
-    display: flex;
-    justify-content: center;
-}
 
 .women-skirt img {
-    width: 400px;
-    margin: 20px;
     transition: webkit-transform 0.3s ease;
     transition: transform 0.3s ease ;
 }
@@ -558,67 +412,23 @@ header
     transform: scale(1.05);
 }
 
-.women-skirt h3 {
-    margin-left: 110px;
-}
-
-.women-skirt .model_1 a {
-    display: flex;
-    justify-content: center;
-    
-}
-
-.women-skirt .model_2 a {
-    display: flex;
-    justify-content: center;
-}
-
-.women-skirt .model_3 a {
-    display: flex;
-    justify-content: center;
-}
-.women-skirt a{
-    transition: color 0.3s ease;
-}
 
 .women-skirt a:hover {
     color: blue;
 }
 
-.signature-clothes {
-    display: flex;
-    justify-content: start;
-    overflow: hidden;
-    width: 120%;
-    margin-left: -120px;
-
-}
-
-.signature-header {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    margin: 100px 0px 50px 0px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    align-items: center;
-}
 
 .signature-picture-slide  {
     display: flex;
     justify-content: start;
-    width: 200%;
+
     position: relative;
-    margin: 10px 120px 10px 10px;
+
     padding: 10px;
-    left: 0px;
+    
     
     animation: 20s signature-slider infinite;
-    margin-left: -10px;
 }
-
-
 
 .signature-picture-slide  img {
     float: left;
@@ -660,11 +470,6 @@ header
     }
 }
 
-.sub-img {
- display: flex;
- width: 200px;
- margin-left: 10px;
-}
 
 .sub-img img{
     width: -10px;
@@ -721,9 +526,8 @@ header
 .signature-picture-slide .silde{
     width: 300px;
     padding-left: -10px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease-in-out;
-    
 }
 
 .signature-picture-slide .silde .main-picture{
@@ -737,7 +541,6 @@ header
     object-fit: cover;
     display: flex;
     justify-content: center;
-    margin-left: 30px;
     overflow: hidden;
 }
 
@@ -752,24 +555,13 @@ header
     padding: 10px;
 }
 
-.buy {
-    margin-left: 80px;
-    text-align: center;
-    width: 100px;
-    padding: 10px;
-    background-color: black;
-   transition:  background-color 0.3s ease-in-out;
-    border-radius: 5px;
-}
+
 .buy:hover{
     background-color: grey;
     color: blue;
 }
 
-.buy a{
-    color: white;
-    text-decoration: none;
-}
+
 
 .lines {
     margin: 150px;
@@ -783,6 +575,19 @@ header
     border: 1px solid gray;
     border-radius: 10px;
 }
+
+
+.info-new {
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.info-new:hover{
+    opacity: 1;
+   
+}
+
+
 
 .resigter {
     width: 100%;
@@ -923,100 +728,6 @@ header
 
 /*Màn hình điện thoại < 740px */
 @media only screen and (max-width: 46.1875em) {
-
-
-    body {
-        width: 340px;
-      
-       
-    }
-
-    .container-2 {
-        width:  14px;
-        margin-left: 10px;
-    }
-
-    .women-skirt {
-        flex-direction: column;
-    }
-
-    .container-2 nav{
-        width: 3000%;
-    }
-
-    .scrolling-text {
-        width: 4000%;
-    }
-    header{
-        left: 0;
-       
-        width: 5%;
-        justify-content: start;
-        padding: 0%;
-    }
-
-    .picture-slide {
-     width: 1000px;
-    }
-    .picture-container {
-        width: 1000px;
-        margin-left: -30px;
-    
-    }
-    .picture-container img{
-     width: 500px;
-    
-    }
-    .silde {
-        width: 1000px;
-    }
-    
-    .category-list{
-        flex-direction: column;
-        margin-left: -80px;
-    }
-
-    .advtisment-silde{
-        flex-direction: column;
-        margin-left: -20px;
-    }
-    .advtisment-silde img{
-      width: 350px;
-    }
-
-    .PE-header {
-        margin-left: 10px;
-    }
-    .PE-picture-container  {
-        width: 150%;
-        margin-left: -50px;
-        margin-top: 10px;
-    }
-    
-
-    .ads_1 {
-        margin-left: -10px;
-        margin-bottom: 50px;
-    }
-
-    .ads-line {
-      display: none;
-    }
-
-    .play-button {
-        left: 40%;
-        top: -50%;
-    }
-
-    .signature-clothes{
-        margin-left: 55px;
-    }
-
-    .signature-picture-slide{
-            
-        animation: 20s signature-slider infinite;
-    }
-
 
     .resigter{
         flex-direction: column;

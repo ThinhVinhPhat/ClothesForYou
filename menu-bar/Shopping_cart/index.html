@@ -124,7 +124,10 @@
                                 <a class="nav-link   fw-bold" href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/MayDo/index.html" >Đặt lịch may</a>
                               </li>
                          
-                              
+                              <li class="nav-item">
+                                <a href="https://thinhvinhphat.github.io/ClothesForYou/menu-bar/KhuyenMai/index.html" class="nav-link fw-bold text-danger">Khuyến mãi</a>
+    
+                              </li>
                          
                             </ul>
                         </div>
@@ -229,31 +232,8 @@
             <div class="product-info">
                 <div class="mb-3" id="product_holder">
 
-                    <!-- <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
-                        <div class="col-1 d-flex justify-content-center" >
-    
-                            <img src="" alt="" id="cart_img">
-    
-                        </div>
-                        <div class="col-5 d-flex justify-content-center flex-md-column">
-                           <div class="info" style="margin-left: 70px;">
-                            <p  id="cart_title"></p>
-                           </div>
-                        </div>
-                        <div class="col-2 mt-5">
-                        <strong  id="cart_price" ></strong>
-                        </div>
-                        <div class="col-2 mt-5 d-flex"   >
-                            <button id="remove">-</button>
-                            <p id="cart_stock" class="m-1">1</p>
-                            <button id="include">+</button>
-                        </div>
-                        <div class="col-2 mt-5" >
-                         <strong id="cart_total"></strong>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
+                </div>
+                <!-- <div class="row-xl-12 d-flex justify-content-center mt-4 mb-4 ">
                     <div class="col-1 d-flex justify-content-center">
                         <img src="./img/040124082_3tt__1_-01_18d8078c4aaa42d08bfff0c17c11894b_medium.webp" alt="" style="width: 100px;">
                     </div>
@@ -334,7 +314,7 @@
                     </div>
                 </div>
             </div>
-
+ -->
 
                
             <div class="pay d-flex ">
@@ -345,7 +325,7 @@
                 <textarea name="" id="" cols="100" rows="5"></textarea>
             </div>
             <div class="rigth" style="margin: 50px 100px 100px 300px; "  id="cart_total">
-                <p style="width: 150%;">Tổng tiền    <strong>2,160,000₫	
+                <p style="width: 150%;">Tổng tiền    <strong id="total_show">2,160,000₫	
                 </strong></p>
                <strong>Vận chuyển</strong>
               <a href="https://thinhvinhphat.github.io/ClothesForYou/payment/index.html">
@@ -480,7 +460,8 @@
         <figure id="figure">
       
          </figure>
-    <button id="addcart" ></button>
+    <button id="add_cart" ></button>
+
 </body>
 <script src="./index.js"></script>
 
