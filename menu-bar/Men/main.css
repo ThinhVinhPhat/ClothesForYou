@@ -20,21 +20,6 @@ header
 
 }
 
-.container-2 {
-    width: 1500px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.container-2 a{
-    transition: color 0.3s ease;
-}
-
-.container-2 a:hover{
-    color: #655cf0af;
-}
-
 
 #menu{
     
@@ -79,12 +64,11 @@ header
     position: absolute;
     width: 200px;
     display: flex;
-    top: 20px;
+    top: 5px;
     justify-content: end;
     background: none;
     border: none;
   }
-  
 
 .menu-container {
     display: flex;
@@ -149,22 +133,18 @@ header
 
 
 
+
 .find_and_addcart {
     display: flex;
-
+    position: relative;
 }
 .find_and_addcart i {
-    position: relative;
+ 
     font-size: 25px;
     padding: 15px;
 }
 
-.find_and_addcart input{
-    width: 1400px;
-    padding: 20px;
-    margin-left: 10px;
-    border-radius: 10px;
-}
+
 
 .find_and_addcart li {
     list-style: none;
@@ -177,10 +157,22 @@ header
     position: absolute;
     content: "3";
     font-size: 18px;
-    right: 20px;
+    right: 5px;
     background-color: red;
     border-radius: 10px;
     color: white;
+}
+
+.find_and_addcart .cart-page {
+    display: none;
+    background-color: #f2f2f2f2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.find_and_addcart .cart-page:hover{
+    display: inline-block;
 }
 
 .scrolling-text {
@@ -259,8 +251,8 @@ header
 
 .category-list {
     display: flex;
-    padding: 50px;
-    
+    justify-content: center;
+    align-items: center;   
     margin-top: 100px;
 }
 
@@ -420,8 +412,8 @@ header
 .PE-picture-slide {
     position: relative;
     width: 1500px;
-    margin-left: -100px;
-    height: 500px;
+  
+    
     overflow: hidden;
 
    
@@ -685,95 +677,6 @@ header
 @media only screen and (max-width: 46.1875em) {
 
 
-    body {
-        width: 330px;
-      
-     
-    }
-
-    .container-2 {
-        width:  14px;
-        margin-left: 10px;
-    }
-
-    .women-skirt {
-        flex-direction: column;
-    }
-
-    .container-2 nav{
-        width: 3000%;
-    }
-
-    .scrolling-text {
-        width: 4000%;
-    }
-    header{
-        left: 0;
-       
-        width: 5%;
-        justify-content: start;
-        padding: 0%;
-    }
-
-    .picture-slide {
-     width: 1000px;
-    }
-    .picture-container {
-        width: 1000px;
-        margin-left: -30px;
-    
-    }
-    .picture-container img{
-     width: 500px;
-    
-    }
-    .silde {
-        width: 1000px;
-    }
-    
-    .category-list{
-        flex-direction: column;
-        margin-left: -80px;
-    }
-
-    .advtisment-silde{
-        flex-direction: column;
-        margin-left: -20px;
-    }
-    .advtisment-silde img{
-      width: 350px;
-    }
-
-    .PE-header {
-        margin-left: 10px;
-    }
-    .PE-picture-container  {
-        width: 50%;
-        margin-left: -50px;
-        margin-top: 10px;
-    }
-
-    .PE-picture-slide{
-        width: 500%;
-    }
-   
-    .PE-picture-slide figure img {
-        width: 300px;
-    }
-    
-
-    .category-price{
-        display: inline;
-        justify-content: center;
-        width: 100%;
-    }
-    .category-price button{
-        display: inline;
-        justify-content: center;
-        width: 100%;
-    }
-
-    
 
     .resigter{
         flex-direction: column;
