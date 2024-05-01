@@ -712,7 +712,7 @@ header
     .category-choice .buttons{
         display: flex;
         flex-direction: column;
-        margin-left: -20px;
+      
     }
 
     .frist-img img {
