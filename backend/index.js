@@ -1,5 +1,5 @@
 import {initializeApp} from 'firebase/app';
-
+import { getAnalytics } from "firebase/analytics" ; 
 import {
   getFirestore,
   collection,
@@ -137,6 +137,7 @@ const node1  = document.getElementById("node1")
 const node2  = document.getElementById("node2")
 const signin_name = document.querySelector("#signin");
 
+
 login_auth.addEventListener("submit",(e)=>{
   e.preventDefault()
   const email  = login_auth.email.value;
@@ -159,7 +160,7 @@ login_auth.addEventListener("submit",(e)=>{
     success.className = "text-success"
     login_auth.appendChild(success)
     error.innerHTML = ""
-
+ 
   })
   .catch((err)=>{
 
